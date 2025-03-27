@@ -27,7 +27,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/a46fcfaa-79b6-49f2-9e87-46d04754d8f1/TriumphOfTheTusk_KeyArt_1920.png'
         },
-        description: `After millennia of infighting and exploitation, many of Belkzen’s orcs crave prosperity and reform. Ardax the White-Hair, a bold orc leader, has invited delegates from across the world to visit Belkzen during its most spectacular natural event: the Flood Truce, when meltwater turns badlands into vibrant wetlands, feeding the nation. Yet not all appreciate Ardax’s diplomatic overtures. When disaster strikes, several guests of honor must take up arms against Belkzens’ enemies and help its orcs realize a brighter future.`,
+        description: `After millennia of infighting and exploitation, many of Belkzen&apos;s orcs crave prosperity and reform. Ardax the White-Hair, a bold orc leader, has invited delegates from across the world to visit Belkzen during its most spectacular natural event: the Flood Truce, when meltwater turns badlands into vibrant wetlands, feeding the nation. Yet not all appreciate Ardax&apos;s diplomatic overtures. When disaster strikes, several guests of honor must take up arms against Belkzens&apos; enemies and help its orcs realize a brighter future.`,
         tags: [
             'Adventure Path',
             'level 3 - 14',
@@ -42,7 +42,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/d97e65ad-ce7e-4ccc-8346-3ae964082ce8/PZO90201_CoverScene_1920x1080.png?w=1920&fm=jpg'
         },
-        description: `After millennia of infighting and exploitation, many of Belkzen’s orcs crave prosperity and reform. Ardax the White-Hair, a bold orc leader, has invited delegates from across the world to visit Belkzen during its most spectacular natural event: the Flood Truce, when meltwater turns badlands into vibrant wetlands, feeding the nation. Yet not all appreciate Ardax’s diplomatic overtures. When disaster strikes, several guests of honor must take up arms against Belkzens’ enemies and help its orcs realize a brighter future.`,
+        description: `After millennia of infighting and exploitation, many of Belkzen&apos;s orcs crave prosperity and reform. Ardax the White-Hair, a bold orc leader, has invited delegates from across the world to visit Belkzen during its most spectacular natural event: the Flood Truce, when meltwater turns badlands into vibrant wetlands, feeding the nation. Yet not all appreciate Ardax&apos;s diplomatic overtures. When disaster strikes, several guests of honor must take up arms against Belkzens&apos; enemies and help its orcs realize a brighter future.`,
         tags: [
             'Adventure Path',
             'level 5 - 13',
@@ -72,7 +72,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/fb617ab9-85fe-4d00-8956-59df8923145d/PZO90196_CoverScene_1920x1080.png?w=1920&fm=jpg'
         },
-        description: `Something strange is happening to your hometown of Willowshore! Nestled on the banks of a river winding through the legendary Specterwood in Tian Xia’s haunted land of Shenmen, the people of Willowshore are no strangers to supernatural threat, but the danger that comes to town on the first day of summer is unlike anything you’ve ever seen before. Over the four seasons to come, you and your fellow home-grown heroes must face evil spirits, sinister fiends, and frightening curses, lest the town of Willowshore succumb to the Season of Ghosts!`,
+        description: `Something strange is happening to your hometown of Willowshore! Nestled on the banks of a river winding through the legendary Specterwood in Tian Xia&apos;s haunted land of Shenmen, the people of Willowshore are no strangers to supernatural threat, but the danger that comes to town on the first day of summer is unlike anything you&apos;ve ever seen before. Over the four seasons to come, you and your fellow home-grown heroes must face evil spirits, sinister fiends, and frightening curses, lest the town of Willowshore succumb to the Season of Ghosts!`,
         tags: [
             'Adventure Path',
             'level 1 - 12',
@@ -87,7 +87,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/2ad4c1c8-b1cc-4a53-9951-67b34f4d425f/KeyArt_SkyKingsTomb_1920x1080.png?w=1920&fm=jpg'
         },
-        description: `Millennia ago, the dwarven creator god Torag shook the earth and called the dwarves to the surface in the Quest for Sky. Taargick rose from the hardships of this journey, becoming the Sky King of Highhelm. For centuries he ruled, creating monuments to Torag and the accomplishments of his people… And then he vanished without a trace. Invited guests of the clans of Highhelm find themselves embroiled in a story of seekers, survivors, and heroes discovering the Sky King’s Tomb.`,
+        description: `Millennia ago, the dwarven creator god Torag shook the earth and called the dwarves to the surface in the Quest for Sky. Taargick rose from the hardships of this journey, becoming the Sky King of Highhelm. For centuries he ruled, creating monuments to Torag and the accomplishments of his people… And then he vanished without a trace. Invited guests of the clans of Highhelm find themselves embroiled in a story of seekers, survivors, and heroes discovering the Sky King&apos;s Tomb.`,
         tags: [
             'Adventure Path',
             'level 1 - 12',
@@ -102,7 +102,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/ada9c951-c9bc-4b39-8333-8df8845d96b8/StolenFate_KeyImage_1920x1080.png?w=1920&fm=jpg'
         },
-        description: `Not even destiny itself is safe when powerful forces seek to seize control of the future, and now it falls to a band of heroes selected by the power of a magical Harrow deck to step in and ensure that fate is not stolen from the world! Already noteworthy in their own right, this new band of adventurers finds themselves quickly swept up in a race to gather and control the scattered cards of a powerful, mysterious artifact tied to the destinies of all who live on Golarion. It’s a race that must be won, for to lose means all possible futures fade save for one—a stolen fate meant to bring power to a very select few and leave the rest of reality in ruin!`,
+        description: `Not even destiny itself is safe when powerful forces seek to seize control of the future, and now it falls to a band of heroes selected by the power of a magical Harrow deck to step in and ensure that fate is not stolen from the world! Already noteworthy in their own right, this new band of adventurers finds themselves quickly swept up in a race to gather and control the scattered cards of a powerful, mysterious artifact tied to the destinies of all who live on Golarion. It&apos;s a race that must be won, for to lose means all possible futures fade save for one—a stolen fate meant to bring power to a very select few and leave the rest of reality in ruin!`,
         tags: [
             'Adventure Path',
             'level 11 - 20',
@@ -132,7 +132,7 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
         image: {
             src: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/72daeb70-d7ea-4ccd-b30e-53a918d318e1/PZO2020_Kingmaker_1920.png?w=1920&fm=jpg'
         },
-        description: `The Kingmaker Adventure Path presents a full-length campaign that chronicles the rise of a new nation—a kingdom built and ruled by your player characters! Face off against bands of bloodthirsty bandits, deadly and dangerous monsters, and mysterious menaces from other realities as you fight to claim the Stolen Lands as your own. Will you rule with justice and mercy, or will you become the very monsters you fought to oppose? In the Kingmaker Adventure Path, the destiny of the world’s newest nation is yours to decide!`,
+        description: `The Kingmaker Adventure Path presents a full-length campaign that chronicles the rise of a new nation—a kingdom built and ruled by your player characters! Face off against bands of bloodthirsty bandits, deadly and dangerous monsters, and mysterious menaces from other realities as you fight to claim the Stolen Lands as your own. Will you rule with justice and mercy, or will you become the very monsters you fought to oppose? In the Kingmaker Adventure Path, the destiny of the world&apos;s newest nation is yours to decide!`,
         tags: [
             'Adventure Path',
             'level 1 - 20',
@@ -246,9 +246,9 @@ function Values() {
             >
                 <p>
                     Embark on an unforgettable adventure with a campaign tailored to your playstyle.
-                    Whether you're drawn to epic sagas, thrilling mysteries, or pulse-pounding dungeon crawls, there's a story waiting for you.
-                    From Paizo’s official Adventure Paths to standalone modules, each campaign is expertly prepared and run with immersive storytelling, tactical combat, and deep roleplay opportunities.
-                    New to Pathfinder 2E? No problem—I’ll guide you every step of the way.
+                    Whether you&apos;re drawn to epic sagas, thrilling mysteries, or pulse-pounding dungeon crawls, there&apos;s a story waiting for you.
+                    From Paizo&apos;s official Adventure Paths to standalone modules, each campaign is expertly prepared and run with immersive storytelling, tactical combat, and deep roleplay opportunities.
+                    New to Pathfinder 2E? No problem—I&apos;ll guide you every step of the way.
                     Veteran player? Prepare for a challenge that tests your strategic mastery.
                     The only question left is: what legend will you forge?
                 </p>
@@ -258,10 +258,10 @@ function Values() {
                 <GridList>
                     <GridListItem title="Official Adventures">
                         Campaigns marked with the <em>Paizo</em> tag are officially published modules, crafted by the creators of Pathfinder Second Edition.
-                        While I didn’t write these stories, I run them with care, expertise, and attention to detail, bringing them to life for you.
+                        While I didn&apos;t write these stories, I run them with care, expertise, and attention to detail, bringing them to life for you.
                     </GridListItem>
                     <GridListItem title="High-Quality Narratives">
-                        Paizo’s adventures are designed by some of the best storytellers in tabletop gaming, ensuring well-balanced encounters, immersive world-building, and compelling plots.
+                        Paizo&apos;s adventures are designed by some of the best storytellers in tabletop gaming, ensuring well-balanced encounters, immersive world-building, and compelling plots.
                         Expect a polished, engaging experience every time.
                     </GridListItem>
                     <GridListItem title="Player Comfort First">
@@ -272,14 +272,14 @@ function Values() {
                     <GridListItem title="Guided Character Creation">
                         Not sure where to start?
                         Campaigns with the <em>Player Guide</em> tag include a player guide to help you build a character that fits the story while staying true to your vision.
-                        Whether you're a seasoned adventurer or brand new, you’ll have the tools you need.
+                        Whether you&apos;re a seasoned adventurer or brand new, you&apos;ll have the tools you need.
                     </GridListItem>
                     <GridListItem title="Immersive Roleplay">
                         Whether you love deep character-driven moments or prefer strategic combat, sessions are tailored to fit your preferred playstyle.
                         NPCs are fully fleshed out, world details are rich, and every session is designed to pull you into the story.
                     </GridListItem>
                     <GridListItem title="A Game for Everyone">
-                        No prior experience? No problem. Whether you're a veteran of Golarion or stepping into your first adventure, the table is open to all.
+                        No prior experience? No problem. Whether you&apos;re a veteran of Golarion or stepping into your first adventure, the table is open to all.
                         Rules explanations, story recaps, and an inclusive space make sure everyone feels welcome.
                     </GridListItem>
                 </GridList>
@@ -294,16 +294,13 @@ export const metadata = {
         'We offer a wide variety of adventure paths, to provide a compelling narrative and tactical combat to suit everyone\'s taste',
 }
 
-export default function Process() {
+export default function AvailableCampaigns() {
     return (
         <>
             <Values />
 
             <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
                 {availableCampaigns.map(AdventurePath)}
-                {/* <Discover /> */}
-                {/* <Build /> */}
-                {/* <Deliver /> */}
             </div>
         </>
     )

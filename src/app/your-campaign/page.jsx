@@ -28,7 +28,7 @@ const services = [
         title: 'Custom Maps',
         description: <p>
             A well-crafted map does more than guide players—it sets the scene for adventure. Using <strong>DungeonDraft,
-                Wonderdraft</strong>, and <strong>Forgotten Adventures' assets</strong>, I create high-quality battle maps, regional overviews,
+                Wonderdraft</strong>, and <strong>Forgotten Adventures&apos; assets</strong>, I create high-quality battle maps, regional overviews,
             and detailed environments that match your setting and style. Whether you need a war-torn battlefield, a sprawling megacity,
             or the ruins of a lost civilization, I ensure that your world feels <strong>alive, immersive, and visually stunning</strong>.
             Maps are fully compatible with Foundry VTT, complete with lighting, walls, and interactive elements to make gameplay seamless.
@@ -60,8 +60,8 @@ const services = [
         image: token,
         title: 'Custom Tokens and Token Rings',
         description: <p>
-            A character’s token is their identity on the battlefield—why settle for anything generic? If you provide artwork, I can create
-            &nbsp;<strong>dynamic or static token rings</strong> that match your campaign’s theme and <strong>integrate seamlessly with Foundry VTT</strong>.
+            A character&apos;s token is their identity on the battlefield—why settle for anything generic? If you provide artwork, I can create
+            &nbsp;<strong>dynamic or static token rings</strong> that match your campaign&apos;s theme and <strong>integrate seamlessly with Foundry VTT</strong>.
             Whether you want glowing magical borders, faction-based designs, or highly stylized personal rings for each character, I ensure
             they feel unique and <strong>enhance the visual storytelling</strong> of your game.
         </p>
@@ -73,7 +73,7 @@ const services = [
             Handouts, notes, and journals should be more than just walls of text. I create <strong>professionally designed, fully themed
                 journals</strong> that fit the <strong>style and atmosphere of your campaign</strong>. With structured formatting, immersive
             design elements, and interactive features, your players will feel like they are reading a <strong>real in-world document</strong>
-            rather than a simple text file. Whether it’s lore entries, quest logs, or ancient prophecies, I ensure that your campaign’s
+            rather than a simple text file. Whether it&apos;s lore entries, quest logs, or ancient prophecies, I ensure that your campaign&apos;s
             information is <strong>engaging, visually appealing, and easy to navigate</strong>.
         </p>
     }
@@ -143,7 +143,7 @@ export default async function Work() {
                 <p>
                     Every great adventure starts with an idea—but turning that idea into a fully realized campaign takes time, skill, and technical expertise.
                     Whether you have an epic story in mind but lack the tools to develop maps, custom modules, immersive audio, or automation in Foundry VTT, I can help.
-                    With experience in campaign development and digital toolsets, I’ll bring your world to life so you can focus on what matters most: storytelling and running unforgettable games for your players.
+                    With experience in campaign development and digital toolsets, I&apos;ll bring your world to life so you can focus on what matters most: storytelling and running unforgettable games for your players.
                 </p>
             </PageIntro>
 

@@ -1,21 +1,9 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
 import ghesia from '@/images/ghesia.webp';
-import { loadCaseStudies } from '@/lib/mdx'
 
 function CustomCampaign() {
   return (
@@ -30,7 +18,7 @@ function CustomCampaign() {
         <FadeInStagger faster>
           <p className="text-white">
             Have a great campaign idea but need help bringing it to the virtual table?
-            We provide custom maps, curated audio for immersive ambiance, and full Foundry VTT module development. Whether you’re a GM looking to streamline your prep or a creator wanting to see your world realized, we handle the technical side so you can focus on storytelling.
+            We provide custom maps, curated audio for immersive ambiance, and full Foundry VTT module development. Whether you&apos;re a GM looking to streamline your prep or a creator wanting to see your world realized, we handle the technical side so you can focus on storytelling.
           </p>
         </FadeInStagger>
       </Container>
@@ -47,8 +35,8 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Whether you're a veteran in Pathfinder Second Edition, coming from Dungeons & Dragons
-          or have never played in a tabletop roleplaying game, there's a place at our table just for you
+          Whether you&apos;re a veteran in Pathfinder Second Edition, coming from Dungeons & Dragons
+          or have never played in a tabletop roleplaying game, there&apos;s a place at our table just for you
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -64,7 +52,7 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Guidance for new players">
-              Whether you're new to Pathfinder 2E or tabletop RPGs in general, we provide patient,
+              Whether you&apos;re new to Pathfinder 2E or tabletop RPGs in general, we provide patient,
               hands-on mentorship to help you learn the rules and embrace roleplay with confidence.
             </ListItem>
             <ListItem title="Deep Narrative & Tactical Combat">
@@ -92,8 +80,6 @@ export const metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">

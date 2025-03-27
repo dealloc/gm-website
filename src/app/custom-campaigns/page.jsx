@@ -23,7 +23,7 @@ export default async function CustomCampaigns() {
                     </p>
                     <p>
                         <em>The Second Star</em> is a full fledged campaign written and developed by your struly.
-                        The story is still under development, so while it's currently not available to be booked,
+                        The story is still under development, so while it&apos;s currently not available to be booked,
                         we are open to collaboration on story, music and artwork.
                     </p>
                 </div>
