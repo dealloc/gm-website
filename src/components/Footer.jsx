@@ -11,6 +11,9 @@ export function Footer() {
           <Logo className="h-8" fillOnHover />
         </Link>
         <p className="text-sm text-neutral-700">
+          <Link href="/legal" aria-label="Legal">Legal</Link>
+        </p>
+        <p className="text-sm text-neutral-700">
           Website developed by <a href="https://www.elixus.be" target="_blank" className="text-primary font-bold">
             Elixus
           </a>

@@ -1,9 +1,16 @@
 import { PageIntro } from '@/components/PageIntro'
 
 export const metadata = {
-    title: 'Custom Campaigns',
-    description:
-        'Sometimes we write our own campaigns, either by ourselves or in collaboration with you',
+    openGraph: {
+        title: 'Custom Campaigns',
+        description:
+            'Sometimes we write our own campaigns, either by ourselves or in collaboration with you',
+        locale: 'en',
+        images: [
+            { url: 'https://www.dealloc.be/_next/static/media/ghesia.c46f7026.webp', width: 800, height: 600 }
+        ],
+        type: 'website'
+    }
 }
 
 export default async function CustomCampaigns() {
@@ -22,7 +29,7 @@ export default async function CustomCampaigns() {
                         Will you uncover the truth in time, or will Ghesia fall to an unseen shadow?
                     </p>
                     <p>
-                        <em>The Second Star</em> is a full fledged campaign written and developed by your struly.
+                        <em>The Second Star</em> is a full fledged campaign written and developed by yours truly.
                         The story is still under development, so while it&apos;s currently not available to be booked,
                         we are open to collaboration on story, music and artwork.
                     </p>

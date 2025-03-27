@@ -4,6 +4,11 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import { GridList, GridListItem } from '@/components/GridList'
 import { SectionIntro } from '@/components/SectionIntro'
+import crownOfTheKoboldKingArt from '@/images/crown-of-the-kobold-king.jpg';
+import rusthengeArt from '@/images/rusthenge.webp';
+import preyForDeathArt from '@/images/prey-for-death.webp';
+import bountiesArt from '@/images/bounties.webp';
+import immortalInfluenceArt from '@/images/immortal-influence.webp';
 
 const availableCampaigns = [
     {
@@ -185,12 +190,80 @@ Those who believe this are about to learn just how dangerously wrong they are.`,
             'Player Guide',
             'Foundry VTT'
         ]
+    },
+    {
+        title: 'Crown of the Kobold King',
+        image: {
+            src: crownOfTheKoboldKingArt
+        },
+        description: `The town of Falcon’s Hollow is no stranger to peril, yet the danger growing in the dungeons below a nearby ruin pose a threat that only a new band of heroes can face. Ravenous undead, cunning kobolds, and sinister necromancers are but a few of the foes that shall soon menace the small lumber town, yet none are potentially as dangerous as the Kobold King himself!`,
+        tags: [
+            'Standalone Adventure',
+            'level 1 - 6',
+            'Paizo',
+            'Foundry VTT',
+            'Custom port'
+        ]
+    },
+    {
+        title: 'Rusthenge',
+        image: {
+            src: rusthengeArt
+        },
+        description: `The ruins of Rusthenge have stood silent vigil over the southern coastline of Chakikoth Isle for eons, dating back to the era of the runelords of ancient Thassilon. The town of Iron Harbor was built in Rusthenge's shadow, but now that New Thassilon has risen from the depths of the distant past, the old ruins are coming under unexpected scrutiny. Something sinister is afoot in Rusthenge, and it falls to a brand new band of adventurers to learn the truth of the ancient evil that stirs deep within its long-abandoned halls! This adventure also includes new items and character backgrounds, as well as a pair of new monsters tied to the region's notorious history.`,
+        tags: [
+            'Standalone Adventure',
+            'level 1',
+            'Paizo',
+            'Foundry VTT'
+        ]
+    },
+    {
+        title: 'Prey for Death',
+        image: {
+            src: preyForDeathArt
+        },
+        description: `The infamous Red Mantis assassins are feared throughout the world for their ruthlessness and legacy—those they slay stay dead! Yet they are not without honor, so when a group of assassins sent on a dangerous mission are met with unexpected treachery, they must clear their own names while remaining true to their murderous calling, even as greater plots and shocking truths reveal themselves.`,
+        tags: [
+            'Standalone Adventure',
+            'level 14',
+            'Paizo',
+            'Foundry VTT'
+        ]
+    },
+    {
+        title: 'Pathfinder Bounties',
+        image: {
+            src: bountiesArt
+        },
+        description: `All officialy Pathfinder bounties are available either as standalone one-shots, or as extra quest in other campaigns (where approperiate)`,
+        tags: [
+            'Oneshot',
+            'Standalone Adventure',
+            '6 parts',
+            'Paizo',
+            'Foundry VTT'
+        ]
+    },
+    {
+        title: 'Pathfinder Society Year of Immortal Influence',
+        image: {
+            src: immortalInfluenceArt
+        },
+        description: `A new year comes for the Pathfinder Society, and what better way to start it off than by attending a fancy event? The Pathfinders find themselves invited to a charity dinner to benefit the Knights of Lastwall fighting in far-off lands against the lich king, Tar-Baphon. They're not the only important Absalom-based faction there however, as the event is filled with lords and ladies and socialites of all kinds, including the Peacebuilders, a group dedicated to ensuring the Pathfinder Society pays for any of its mistakes. In the middle of dinner, evidence of a strange ritual is found and the Pathfinders must investigate before dinner becomes a murder mystery!`,
+        tags: [
+            'Oneshot',
+            'Standalone Adventure',
+            '13 parts',
+            'Paizo',
+            'Foundry VTT'
+        ]
     }
 ];
 
 function AdventurePath({ title, image, description, tags }) {
     return (
-        <Container className="group/section [counter-increment:section]">
+        <Container key={title} className="group/section [counter-increment:section]">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
                 <div className="flex justify-center">
                     <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -289,9 +362,16 @@ function Values() {
 }
 
 export const metadata = {
-    title: 'Available Campaigns',
-    description:
-        'We offer a wide variety of adventure paths, to provide a compelling narrative and tactical combat to suit everyone\'s taste',
+    openGraph: {
+        title: 'Available Campaigns',
+        description:
+            'We offer a wide variety of adventure paths, to provide a compelling narrative and tactical combat to suit everyone\'s taste',
+        locale: 'en',
+        images: [
+            { url: 'https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/aeb5d655-1da6-4e0b-b498-57146744aa8c/PZO90163_RuinsofGauntlight_Cover.png?w=1920&fm=jpg', width: 800, height: 600 }
+        ],
+        type: 'website'
+    }
 }
 
 export default function AvailableCampaigns() {

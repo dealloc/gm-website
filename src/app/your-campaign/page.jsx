@@ -128,9 +128,16 @@ function ProvidedService({ image, title, description }) {
 }
 
 export const metadata = {
-    title: 'Our Work',
-    description:
-        'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+        openGraph: {
+            title: 'Your Campaign',
+            description:
+                'Tailor-made campaigns to bring your stories to life.',
+            locale: 'en',
+            images: [
+                { url: 'https://www.dealloc.be/_next/static/media/fvtt-d20.71d78200.png', width: 800, height: 600 }
+            ],
+            type: 'website'
+        }
 }
 
 export default async function YourCampaign() {

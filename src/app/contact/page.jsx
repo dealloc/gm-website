@@ -6,8 +6,12 @@ import { PageIntro } from '@/components/PageIntro'
 
 
 export const metadata = {
-  title: 'Contact Us',
-  description: 'Let&apos;s work or play together. We can&apos;t wait to hear from you.',
+  openGraph: {
+    title: 'Contact Us',
+    description: 'Let&apos;s work or play together. We can&apos;t wait to hear from you.',
+    locale: 'en',
+    type: 'website'
+  }
 }
 
 export default function Contact() {
