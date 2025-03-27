@@ -7,7 +7,6 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -122,33 +121,36 @@ function ContactDetails() {
           ))}
         </dl>
       </Border>
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
-        </h2>
-        <SocialMedia className="mt-6" />
-      </Border>
     </FadeIn>
   )
 }
 
 export const metadata = {
   title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  description: 'Let’s work or play together. We can’t wait to hear from you.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
+      <PageIntro eyebrow="Contact us" title="Let’s talk">
         <p>We can’t wait to hear from you.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-          <ContactForm />
-          <ContactDetails />
+        <div className="flex flex-col gap-x-8 gap-y-24">
+          <div className="flex gap-4">
+            <p className="mt-2 text-sm text-neutral-600">
+              Hi, I'm still making this page.
+            </p>
+            <p className="mt-2 text-sm text-neutral-600">
+              Get in touch with me on Discord!
+            </p>
+            <Button href="https://discordapp.com/users/98476629373767680">Click here</Button>
+          </div>
+          <Link href="/" className="mt-4 text-sm font-semibold text-neutral-950 transition hover:text-neutral-700">
+            Return home
+          </Link>
         </div>
       </Container>
     </>

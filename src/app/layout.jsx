@@ -4,7 +4,7 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Studio',
+    template: '%s',
     default: 'dealloc',
   },
 }
