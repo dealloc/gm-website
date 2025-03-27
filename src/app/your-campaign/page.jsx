@@ -133,7 +133,7 @@ export const metadata = {
         'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
 
-export default async function Work() {
+export default async function YourCampaign() {
     return (
         <>
             <PageIntro
