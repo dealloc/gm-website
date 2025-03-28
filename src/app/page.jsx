@@ -1,3 +1,4 @@
+import { PricingBlock } from '@/components/PricingBlock'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
@@ -96,6 +97,8 @@ export default async function Home() {
       <CustomCampaign />
 
       <Services />
+
+      <PricingBlock></PricingBlock>
     </>
   )
 }
