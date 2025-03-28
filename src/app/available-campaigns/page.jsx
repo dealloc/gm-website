@@ -4,6 +4,7 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import { GridList, GridListItem } from '@/components/GridList'
 import { SectionIntro } from '@/components/SectionIntro'
+import beginnerBoxArt from '@/images/beginner-box.webp';
 import crownOfTheKoboldKingArt from '@/images/crown-of-the-kobold-king.jpg';
 import rusthengeArt from '@/images/rusthenge.webp';
 import preyForDeathArt from '@/images/prey-for-death.webp';
@@ -11,6 +12,21 @@ import bountiesArt from '@/images/bounties.webp';
 import immortalInfluenceArt from '@/images/immortal-influence.webp';
 
 const availableCampaigns = [
+    {
+        title: 'Beginner Box',
+        image: {
+            src: beginnerBoxArt
+        },
+        description: `Take the first step into an amazing world of fantasy adventure! The Pathfinder Beginner Box contains everything you need to learn how to play the Pathfinder Roleplaying Game, including rules to create your own fantasy hero and tools to make your own amazing stories.
+Will you be a courageous fighter, charging headfirst into battle, or a sly rogue, moving quietly to strike at foes from the shadows? Maybe you will be a knowledgeable wizard, wielding incredible arcane spells or a wise and pious cleric, using the power of your deity to shape the world for the better. It is all up to you!`,
+        tags: [
+            'Standalone Adventure',
+            'level 1 - 4',
+            'Paizo',
+            'Player Guide',
+            'Foundry VTT'
+        ]
+    },
     {
         title: 'Spore War',
         image: {
