@@ -12,7 +12,7 @@ export function PricingBlock() {
           </h2>
           <p className="font-medium text-white mt-2">
             We believe that high-quality tabletop experiences should be accessible to everyone.
-            Game sessions start at €5 per session, with pricing varying based on the length, complexity, and style of the game.
+            Game sessions start at €5 per session (pp), with pricing varying based on the length, complexity, and style of the game.
             There is also a one-time sign-up fee of €15, which covers Session 0, character creation support, and administrative costs.
           </p>
           <p className="font-medium text-white mt-1">
