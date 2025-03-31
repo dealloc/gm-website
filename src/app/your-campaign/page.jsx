@@ -1,19 +1,19 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import { Border } from '@/components/Border'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
+import { Border } from '@/components/Border';
+import { Container } from '@/components/Container';
+import { FadeIn } from '@/components/FadeIn';
+import { PageIntro } from '@/components/PageIntro';
 import foundryCommunityLogo from '@/images/fvtt-d20.png';
-import map from '@/images/map.svg';
-import headphones from '@/images/headphones.svg';
-import code from '@/images/code.svg';
-import bookOpen from '@/images/book-open.svg';
+import { MapIcon } from '@/components/Icons/MapIcon';
+import { HeadphonesIcon } from '@/components/Icons/HeadphonesIcon';
+import { CodeIcon } from '@/components/Icons/CodeIcon';
 import token from '@/images/token.webp';
+import { BookOpenIcon } from '@/components/Icons/BookOpenIcon';
 
 const services = [
     {
-        image: foundryCommunityLogo,
+        image: (className) => <Image src={foundryCommunityLogo} unoptimized className={className} />,
         title: 'Foundry VTT integration',
         description: <p>
             Your campaign, ready to launch. I take your story, setting, and mechanics and package everything into a
@@ -24,7 +24,7 @@ const services = [
         </p>
     },
     {
-        image: map,
+        image: (className) => <MapIcon className={className} />,
         title: 'Custom Maps',
         description: <p>
             A well-crafted map does more than guide players—it sets the scene for adventure. Using <strong>DungeonDraft,
@@ -35,7 +35,7 @@ const services = [
         </p>
     },
     {
-        image: headphones,
+        image: (className) => <HeadphonesIcon className={className} />,
         title: 'Ambience',
         description: <p>
             Sound transforms an RPG session, adding layers of depth and emotion. I help you build a custom <strong>audio library</strong>
@@ -46,7 +46,7 @@ const services = [
         </p>
     },
     {
-        image: code,
+        image: (className) => <CodeIcon className={className} />,
         title: 'Code',
         description: <p>
             Foundry VTT is powerful, but it truly shines with <strong>custom automation and scripts</strong> designed to enhance gameplay.
@@ -57,7 +57,7 @@ const services = [
         </p>
     },
     {
-        image: token,
+        image: (className) => <Image src={token} unoptimized className={className} />,
         title: 'Custom Tokens and Token Rings',
         description: <p>
             A character&apos;s token is their identity on the battlefield—why settle for anything generic? If you provide artwork, I can create
@@ -67,7 +67,7 @@ const services = [
         </p>
     },
     {
-        image: bookOpen,
+        image: (className) => <BookOpenIcon className={className} />,
         title: 'Completely Customizable Journals',
         description: <p>
             Handouts, notes, and journals should be more than just walls of text. I create <strong>professionally designed, fully themed
@@ -84,10 +84,10 @@ function WhatWeProvide() {
     return (
         <Container className="mt-40">
             <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-neutral-950 dark:text-white">
                     What we bring to the table
                 </h2>
-                <h6 className="font-display text-sm font-semibold text-neutral-950">
+                <h6 className="font-display text-sm font-semibold text-neutral-950 dark:text-white">
                     (get it?)
                 </h6>
             </FadeIn>
@@ -104,20 +104,15 @@ function ProvidedService({ image, title, description }) {
             <article>
                 <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                     <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                        <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                            <Image
-                                src={image}
-                                alt=""
-                                className="w-24 flex-none"
-                                unoptimized
-                            />
+                        <div className="flex justify-center items-center sm:gap-x-6 h-full text-dark dark:text-neutral-100">
+                            {image("w-24 lg:w-48 flex-none")}
                         </div>
                     </div>
                     <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                        <p className="font-display text-4xl font-medium text-neutral-950">
+                        <p className="font-display text-4xl font-medium text-neutral-950 dark:text-white">
                             {title}
                         </p>
-                        <div className="mt-6 space-y-6 text-base text-neutral-600">
+                        <div className="mt-6 space-y-6 text-base text-neutral-600 dark:text-neutral-50">
                             {description}
                         </div>
                     </div>

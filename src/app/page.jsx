@@ -8,16 +8,16 @@ import ghesia from '@/images/ghesia.webp';
 
 function CustomCampaign() {
   return (
-    <section className="mt-24 bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <section className="mt-24 bg-neutral-950 dark:bg-white py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h1 className="text-center font-display font-semibold tracking-wider text-white sm:text-left">
+          <h1 className="text-center font-display font-semibold tracking-wider text-white dark:text-neutral-950 sm:text-left">
             Bring Your World to Life in Foundry VTT
           </h1>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-neutral-800 dark:bg-gray-50" />
         </FadeIn>
         <FadeInStagger faster>
-          <p className="text-white">
+          <p className="text-white dark:text-neutral-950">
             Have a great campaign idea but need help bringing it to the virtual table?
             We provide custom maps, curated audio for immersive ambiance, and full Foundry VTT module development. Whether you&apos;re a GM looking to streamline your prep or a creator wanting to see your world realized, we handle the technical side so you can focus on storytelling.
           </p>
@@ -85,10 +85,10 @@ export default async function Home() {
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
+          <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 dark:text-white sm:text-7xl">
             Professional Game Mastering for Adventurers of All Levels
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-neutral-600 dark:text-gray-100">
             Explore rich narratives, intense combat, and immersive roleplay in Pathfinder Second Edition campaigns.
           </p>
         </FadeIn>
@@ -98,7 +98,7 @@ export default async function Home() {
 
       <Services />
 
-      <PricingBlock></PricingBlock>
+      <PricingBlock />
     </>
   )
 }
