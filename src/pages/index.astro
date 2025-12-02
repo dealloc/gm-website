@@ -1,49 +1,200 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import Badge from '../components/Badge.astro';
+import { SITE_TITLE, PRICING } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative bg-white overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-[#fdf4f5] via-[#fbe8eb] to-[#f6d5db] opacity-60"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#b93d5e]/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-6 py-20 md:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Content -->
+        <div class="space-y-8 animate-fade-in">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#fbe8eb] rounded-full text-sm font-medium text-[#9c2d4b]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <span>Professional Pathfinder 2E Game Master</span>
+          </div>
+
+          <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight">
+            Epic Adventures
+            <span class="block bg-gradient-to-r from-[#9c2d4b] to-[#cf5d77] bg-clip-text text-transparent">
+              Start Here
+            </span>
+          </h1>
+
+          <p class="text-xl text-stone-600 leading-relaxed max-w-xl">
+            Experience professionally-run Pathfinder 2E campaigns in Foundry VTT. Rich narratives, tactical combat, and deep character development for players of all experience levels.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <Button variant="primary" href="/campaigns" size="lg">
+              Browse Campaigns
+            </Button>
+            <Button variant="outline" href="/about" size="lg">
+              Learn More
+            </Button>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-8 border-t border-stone-200">
+            <div>
+              <div class="text-3xl font-bold text-[#9c2d4b]">{PRICING.currency}{PRICING.sessionPrice}</div>
+              <div class="text-sm text-stone-600 mt-1">Per Session</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-[#9c2d4b]">15+</div>
+              <div class="text-sm text-stone-600 mt-1">Campaigns</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-[#9c2d4b]">100%</div>
+              <div class="text-sm text-stone-600 mt-1">Foundry VTT</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Element -->
+        <div class="relative lg:block animate-scale-in">
+          <div class="relative aspect-square max-w-lg mx-auto">
+            <!-- Decorative elements -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] rounded-3xl rotate-3 shadow-2xl"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#0d9390] to-[#14b8b0] rounded-3xl -rotate-3 shadow-2xl opacity-20"></div>
+
+            <!-- Content card -->
+            <div class="absolute inset-4 bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-center space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-start gap-3 p-4 bg-stone-50 rounded-xl">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] flex items-center justify-center flex-shrink-0 text-white text-xl">
+                    🎲
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-stone-900">20+ Adventure Paths</div>
+                    <div class="text-sm text-stone-600 mt-1">From level 1 to 20</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-stone-50 rounded-xl">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#0d9390] to-[#14b8b0] flex items-center justify-center flex-shrink-0 text-white text-xl">
+                    🗺️
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-stone-900">Foundry VTT</div>
+                    <div class="text-sm text-stone-600 mt-1">Custom maps & automation</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-stone-50 rounded-xl">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#f59e0b] to-[#d97706] flex items-center justify-center flex-shrink-0 text-white text-xl">
+                    👥
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-stone-900">All Experience Levels</div>
+                    <div class="text-sm text-stone-600 mt-1">New players welcome</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-stone-200">
+                <Badge variant="success" size="md">
+                  <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  Sessions Available Now
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four Pillars Section -->
+  <Section background="white" padding="xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl mb-4">Why Choose Our Sessions?</h2>
+      <p class="text-xl text-stone-600 max-w-2xl mx-auto">
+        Experience the perfect blend of storytelling, gameplay, and community
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center p-6 rounded-2xl border border-stone-200 hover:border-[#b93d5e] hover:shadow-lg transition-all duration-250">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] flex items-center justify-center text-[#9c2d4b] text-3xl">
+          🎓
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Guidance for New Players</h3>
+        <p class="text-stone-600">Patient teaching approach. No experience required. Learn as you play.</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl border border-stone-200 hover:border-[#b93d5e] hover:shadow-lg transition-all duration-250">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] flex items-center justify-center text-[#9c2d4b] text-3xl">
+          📖
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Deep Narratives</h3>
+        <p class="text-stone-600">Rich storytelling, character-focused adventures, and meaningful choices.</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl border border-stone-200 hover:border-[#b93d5e] hover:shadow-lg transition-all duration-250">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] flex items-center justify-center text-[#9c2d4b] text-3xl">
+          🌐
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Online Play</h3>
+        <p class="text-stone-600">Professional Foundry VTT setup with custom maps and immersive ambience.</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl border border-stone-200 hover:border-[#b93d5e] hover:shadow-lg transition-all duration-250">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] flex items-center justify-center text-[#9c2d4b] text-3xl">
+          🤝
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Inclusive Community</h3>
+        <p class="text-stone-600">Welcoming environment with diverse characters and respectful table culture.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Pricing Section -->
+  <Section background="stone" padding="xl">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl mb-6">Simple, Transparent Pricing</h2>
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-[#b93d5e]">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+          <div>
+            <div class="text-5xl md:text-6xl font-bold text-[#9c2d4b]">{PRICING.currency}{PRICING.sessionPrice}</div>
+            <div class="text-stone-600 mt-2">per session</div>
+          </div>
+          <div class="hidden md:block text-4xl text-stone-300">+</div>
+          <div>
+            <div class="text-5xl md:text-6xl font-bold text-[#9c2d4b]">{PRICING.currency}{PRICING.signupFee}</div>
+            <div class="text-stone-600 mt-2">one-time signup</div>
+          </div>
+        </div>
+        <p class="text-stone-600 mb-8">
+          Signup fee includes Session 0, character creation support, and administrative costs
+        </p>
+        <Button variant="primary" href="/campaigns" size="lg">Get Started</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section background="gradient" padding="xl">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl mb-6">Ready to Start Your Adventure?</h2>
+      <p class="text-xl text-stone-600 mb-8">
+        Browse our available campaigns and find the perfect adventure for your playstyle
+      </p>
+      <Button variant="primary" href="/campaigns" size="lg">View All Campaigns</Button>
+    </div>
+  </Section>
+</BaseLayout>
