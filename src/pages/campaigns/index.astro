@@ -12,9 +12,9 @@ const campaigns = allCampaigns.sort((a, b) => {
 
 // Group campaigns by type
 const adventurePaths = campaigns.filter(c => c.data.campaignType === 'adventure-path');
+const adventures = campaigns.filter(c => c.data.campaignType === 'adventure');
 const oneShots = campaigns.filter(c => c.data.campaignType === 'one-shot');
 const customCampaigns = campaigns.filter(c => c.data.campaignType === 'custom');
-const standalones = campaigns.filter(c => c.data.campaignType === 'standalone');
 
 // Stats
 const totalCampaigns = campaigns.length;
@@ -77,6 +77,19 @@ const totalCampaigns = campaigns.length;
             </Section>
     )}
 
+	<!-- Custom Campaigns -->
+	{adventures.length > 0 && (
+		<Section background="white" padding="xl">
+			<div class="mb-8">
+				<h2 class="text-3xl md:text-4xl font-bold mb-3">Standalone Adventures</h2>
+				<p class="text-lg text-stone-600">
+					(Slightly) smaller adventures, but still good for quite a few sessions
+				</p>
+			</div>
+			<CampaignGrid campaigns={adventures}/>
+		</Section>
+	)}
+
     <!-- One-Shots -->
     {oneShots.length > 0 && (
             <Section background="stone" padding="xl">
@@ -87,19 +100,6 @@ const totalCampaigns = campaigns.length;
                     </p>
                 </div>
                 <CampaignGrid campaigns={oneShots}/>
-            </Section>
-    )}
-
-    <!-- Custom Campaigns -->
-    {standalones.length > 0 && (
-            <Section background="white" padding="xl">
-                <div class="mb-8">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Custom Campaigns</h2>
-                    <p class="text-lg text-stone-600">
-                        Original homebrew adventures crafted for unique experiences
-                    </p>
-                </div>
-                <CampaignGrid campaigns={standalones}/>
             </Section>
     )}
 
