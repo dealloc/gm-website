@@ -12,7 +12,6 @@ import {getCollection} from 'astro:content';
 const allCampaigns = await getCollection('campaigns');
 const featuredCampaigns = allCampaigns
 	.filter(c => c.data.status === 'available')
-	.sort((a, b) => (b.data.priority || 0) - (a.data.priority || 0))
 	.slice(0, 3);
 ---
 
@@ -98,7 +97,7 @@ const featuredCampaigns = allCampaigns
 										🎲
 									</div>
 									<div class="flex-1">
-										<div class="font-semibold text-stone-900">20+ Adventure Paths</div>
+										<div class="font-semibold text-stone-900">{allCampaigns.length} Adventure Paths</div>
 										<div class="text-sm text-stone-600 mt-1">From level 1 to 20</div>
 									</div>
 								</div>

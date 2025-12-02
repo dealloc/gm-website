@@ -10,7 +10,7 @@ const campaigns = defineCollection({
             description: z.string(),
 
             // Classification
-            campaignType: z.enum(['adventure-path', 'one-shot', 'custom']),
+            campaignType: z.enum(['adventure-path', 'adventure', 'one-shot', 'custom']),
             levelRange: z.object({
                 min: z.number().min(1).max(20),
                 max: z.number().min(1).max(20),

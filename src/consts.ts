@@ -8,6 +8,7 @@ export const SITE_DESCRIPTION = 'Professional Game Mastering for Adventurers of 
 export const NAV_LINKS = [
 	{text: 'Home', href: '/'},
 	{text: 'Campaigns', href: '/campaigns'},
+	{text: 'Custom Campaigns', href: '/custom-campaigns'},
 	{text: 'Services', href: '/services'},
 	{text: 'About', href: '/about'},
 	{text: 'Contact', href: '/contact'},
