@@ -1,63 +1,283 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
+<BaseLayout
+	title="About | Professional Pathfinder 2E Game Master"
+	description="Learn about our approach to Game Mastering, our philosophy on running inclusive and engaging Pathfinder 2E campaigns, and what makes our tables special."
 >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-[#fdf4f5] via-white to-[#f0fdfc] py-20 md:py-32">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+					Bringing Stories
+					<span class="block bg-gradient-to-r from-[#9c2d4b] to-[#107574] bg-clip-text text-transparent">
+            To Life
+          </span>
+				</h1>
+				<p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
+					Professional Game Master dedicated to creating memorable Pathfinder 2E experiences for players of
+					all backgrounds
+				</p>
+			</div>
+		</div>
+	</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+	<!-- My Approach -->
+	<Section background="white" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">My Approach</h2>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<div class="prose prose-lg prose-stone mx-auto">
+				<p class="text-xl leading-relaxed text-stone-700">
+					I believe that tabletop RPGs are at their best when they bring people together to tell collaborative
+					stories. Whether you're a complete newcomer curious about Pathfinder 2E or a veteran player seeking
+					a new campaign, my goal is to create a welcoming space where everyone can contribute to something
+					special.
+				</p>
+			</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+				<div class="text-center">
+					<div
+						class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] flex items-center justify-center text-white text-2xl">
+						📚
+					</div>
+					<h3 class="text-xl font-display font-semibold mb-2">Story First</h3>
+					<p class="text-stone-600">
+						Rich narratives with meaningful character arcs and player agency at the forefront
+					</p>
+				</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+				<div class="text-center">
+					<div
+						class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#107574] to-[#0d9390] flex items-center justify-center text-white text-2xl">
+						🎲
+					</div>
+					<h3 class="text-xl font-display font-semibold mb-2">Rules Support Story</h3>
+					<p class="text-stone-600">
+						Pathfinder 2E's tactical depth enhances drama without getting in the way
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div
+						class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#d97706] to-[#f59e0b] flex items-center justify-center text-white text-2xl">
+						🤝
+					</div>
+					<h3 class="text-xl font-display font-semibold mb-2">Everyone Matters</h3>
+					<p class="text-stone-600">
+						Safe, inclusive tables where all players have space to shine
+					</p>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Why Pathfinder 2E -->
+	<Section background="stone" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">Why Pathfinder 2E?</h2>
+
+			<div class="bg-white rounded-2xl p-8 md:p-12 border border-stone-200 space-y-6">
+				<p class="text-lg leading-relaxed text-stone-700">
+					Pathfinder Second Edition strikes a perfect balance between tactical depth and narrative
+					flexibility. The three-action system creates dynamic, engaging combat where every turn matters.
+					Character customization is virtually limitless, allowing players to build the exact hero they
+					envision.
+				</p>
+
+				<p class="text-lg leading-relaxed text-stone-700">
+					But what truly sets PF2E apart is how well it supports collaborative storytelling. The game gives
+					GMs powerful tools to create challenges that feel fair yet epic, while giving players meaningful
+					choices both in and out of combat.
+				</p>
+
+				<p class="text-lg leading-relaxed text-stone-700">
+					Whether we're running a published Adventure Path or a custom campaign, Pathfinder 2E provides the
+					perfect foundation for memorable adventures.
+				</p>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Why Foundry VTT -->
+	<Section background="white" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">Why Foundry VTT?</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-gradient-to-br from-[#fbe8eb] to-[#fdf4f5] rounded-2xl p-8 border border-[#b93d5e]/20">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-stone-900">Browser-Based Convenience</h3>
+					<p class="text-stone-600 leading-relaxed">
+						No downloads, no installations—just click the link and you're at the table. Works on any laptop
+						or computer with a web browser.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#f0fdfc] to-[#ccfbf8] rounded-2xl p-8 border border-[#107574]/20">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-stone-900">Powerful Automation</h3>
+					<p class="text-stone-600 leading-relaxed">
+						PF2E system automation handles complex rules, letting us focus on story and strategy instead of
+						number crunching.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#fffbeb] to-[#fef3c7] rounded-2xl p-8 border border-[#d97706]/20">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-stone-900">Immersive Visuals</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Dynamic lighting, animated tokens, and beautiful maps create a cinematic experience that rivals
+						in-person play.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#faf5ff] to-[#f3e8ff] rounded-2xl p-8 border border-[#7c3aed]/20">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-stone-900">Infinite Customization</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Modules, macros, and custom content let us tailor every campaign to create exactly the
+						experience we want.
+					</p>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- My Gaming Background -->
+	<Section background="stone" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">Gaming Background</h2>
+
+			<div class="bg-white rounded-2xl p-8 md:p-12 border border-stone-200">
+				<div class="prose prose-lg prose-stone mx-auto">
+					<p class="text-lg leading-relaxed text-stone-700">
+						I've been playing tabletop RPGs for almost a decade, with experience in D&D 5E and Pathfinder 2E.
+						When I decided to run my first campaign I went with Pathfinder's beginner box and I've been hooked
+						ever since.
+					</p>
+
+					<p class="text-lg leading-relaxed text-stone-700">
+						As a GM, I've run campaigns ranging from epic 1-20 Adventure Paths to intimate custom
+						storylines. I've learned that the best sessions happen when players feel invested in both their
+						characters and the world around them—and that's what I strive to create at every table.
+					</p>
+
+					<p class="text-lg leading-relaxed text-stone-700">
+						Outside of gaming, I'm passionate about technology, storytelling, and building inclusive
+						communities. These interests all feed back into creating better game experiences.
+					</p>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Table Culture -->
+	<Section background="white" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">Table Culture & Expectations</h2>
+
+			<div class="space-y-6">
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Inclusive & Respectful</h3>
+						<p class="text-stone-600 leading-relaxed">
+							All players are welcome regardless of experience level, background, or identity. We maintain
+							a harassment-free environment where everyone feels safe.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Collaborative Storytelling</h3>
+						<p class="text-stone-600 leading-relaxed">
+							The best stories emerge from player choices. I create frameworks and NPCs, but you shape the
+							narrative through your actions and decisions.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Rules as Guidelines</h3>
+						<p class="text-stone-600 leading-relaxed">
+							I know the rules well, but I'm not rigid about them. If a rule gets in the way of fun or
+							story, we'll find a solution together. <em>rule of cool</em>
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Spotlight Sharing</h3>
+						<p class="text-stone-600 leading-relaxed">
+							Every character gets their moment to shine. Combat encounters, social scenes, and
+							exploration all provide opportunities for different party members to excel.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Communication is Key</h3>
+						<p class="text-stone-600 leading-relaxed">
+							Questions, concerns, or feedback are always welcome. If something isn't working for you,
+							let's talk about it and find a solution.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-4 items-start">
+					<div
+						class="w-10 h-10 rounded-full bg-[#b93d5e] flex items-center justify-center text-white font-bold flex-shrink-0">
+						✓
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Fail forward</h3>
+						<p class="text-stone-600 leading-relaxed">
+							I might be playing the bad guys, but that doesn't mean I'm not on the players' side!
+							I'll cheer your wins and groan when you roll that <kbd>1</kbd> with you.
+							Even failure isn't the end of the story, just another story beat.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- CTA Section -->
+	<Section background="gradient" padding="xl">
+		<div class="text-center max-w-3xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display mb-6">Ready to Adventure Together?</h2>
+			<p class="text-xl text-stone-600 mb-8">
+				Browse available campaigns or reach out to discuss custom options
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<Button variant="primary" href="/campaigns" size="lg">View Campaigns</Button>
+				<Button variant="outline" href="/contact" size="lg">Get in Touch</Button>
+			</div>
+		</div>
+	</Section>
+</BaseLayout>

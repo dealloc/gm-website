@@ -1,19 +1,41 @@
-import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import {defineCollection, z} from 'astro:content';
+import {glob} from 'astro/loaders';
 
-const blog = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			// Transform string to Date object
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
-			heroImage: image().optional(),
-		}),
+const campaigns = defineCollection({
+    loader: glob({base: './content/campaigns', pattern: '**/*.{md,mdx}'}),
+    schema: ({image}) =>
+        z.object({
+            // Core Information
+            title: z.string(),
+            description: z.string(),
+
+            // Classification
+            campaignType: z.enum(['adventure-path', 'one-shot', 'custom']),
+            levelRange: z.object({
+                min: z.number().min(1).max(20),
+                max: z.number().min(1).max(20),
+            }),
+
+            // Metadata
+            tags: z.array(z.string()),
+            publisher: z.string().optional(),
+
+            // Imagery
+            heroImage: image(),
+            thumbnailImage: image().optional(),
+
+            // Status & Availability
+            status: z.enum(['available', 'full', 'upcoming', 'archived']).default('available'),
+
+            // Booking Info
+            playersMin: z.number().default(3),
+            playersMax: z.number().default(6),
+
+            // SEO
+            seoDescription: z.string().optional(),
+            publishDate: z.coerce.date(),
+            updatedDate: z.coerce.date().optional(),
+        }),
 });
 
-export const collections = { blog };
+export const collections = {campaigns};

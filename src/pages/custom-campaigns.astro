@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import CampaignCard from '../components/CampaignCard.astro';
+import Button from '../components/Button.astro';
+import {getCollection} from 'astro:content';
+
+// Get custom campaigns
+const allCampaigns = await getCollection('campaigns');
+const customCampaigns = allCampaigns.filter(c => c.data.campaignType === 'custom');
+---
+
+<BaseLayout
+	title="Custom Campaigns | Original Adventures"
+	description="Experience unique, original adventures crafted specifically for our tables. Explore homebrew worlds, custom storylines, and narratives you won't find anywhere else."
+>
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-[#fdf4f5] via-white to-[#fffbeb] py-20 md:py-32">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+					Original Adventures,
+					<span
+						class="block bg-gradient-to-r from-[#9c2d4b] via-[#107574] to-[#d97706] bg-clip-text text-transparent">
+            Crafted for You
+          </span>
+				</h1>
+				<p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
+					Step into unique worlds and stories you won't find anywhere else—homebrew campaigns designed to
+					showcase the best of Pathfinder 2E
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- What Makes Custom Campaigns Special -->
+	<Section background="white" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">What Makes Them Special?</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-gradient-to-br from-[#fbe8eb] to-[#fdf4f5] rounded-2xl p-8 border border-[#b93d5e]/20">
+					<div class="text-4xl mb-4">✨</div>
+					<h3 class="text-2xl font-display font-semibold mb-3 text-stone-900">Original Storylines</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Every custom campaign is built from the ground up with unique plots, characters, and
+						world-building you won't find in published adventures.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#f0fdfc] to-[#ccfbf8] rounded-2xl p-8 border border-[#107574]/20">
+					<div class="text-4xl mb-4">🎯</div>
+					<h3 class="text-2xl font-display font-semibold mb-3 text-stone-900">Player-Focused Design</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Custom campaigns adapt to your party's choices and character backgrounds, creating deeply
+						personal narratives that respond to player agency.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#fffbeb] to-[#fef3c7] rounded-2xl p-8 border border-[#d97706]/20">
+					<div class="text-4xl mb-4">🗺️</div>
+					<h3 class="text-2xl font-display font-semibold mb-3 text-stone-900">Unique Locations</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Explore settings and regions crafted specifically for these campaigns, from forgotten cities to
+						mysterious wilderness frontiers.
+					</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-[#faf5ff] to-[#f3e8ff] rounded-2xl p-8 border border-[#7c3aed]/20">
+					<div class="text-4xl mb-4">⚔️</div>
+					<h3 class="text-2xl font-display font-semibold mb-3 text-stone-900">Fresh Challenges</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Experience encounters and puzzles designed to surprise even veteran players, with custom
+						monsters and mechanics that keep gameplay fresh.
+					</p>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Custom Campaigns Grid -->
+	{customCampaigns.length > 0 && (
+		<Section background="stone" padding="xl">
+			<div class="mb-16 text-center">
+				<h2 class="text-4xl md:text-5xl font-display mb-4">Available Custom Campaigns</h2>
+				<p class="text-xl text-stone-600 max-w-2xl mx-auto">
+					Original adventures ready for your group to explore
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{customCampaigns.map((campaign) => (
+					<CampaignCard campaign={campaign}/>
+				))}
+			</div>
+		</Section>
+	)}
+
+	<!-- How Custom Campaigns Work -->
+	<Section background="white" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">How It Works</h2>
+
+			<div class="space-y-6">
+				<div class="flex gap-6 items-start">
+					<div
+						class="w-12 h-12 rounded-full bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+						1
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Choose Your Campaign</h3>
+						<p class="text-stone-600 leading-relaxed">
+							Browse available custom campaigns and select one that matches your group's interests and
+							preferred playstyle.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div
+						class="w-12 h-12 rounded-full bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+						2
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Session Zero</h3>
+						<p class="text-stone-600 leading-relaxed">
+							We'll work together to create characters that fit the setting, establish party dynamics, and
+							set expectations for the campaign ahead.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex gap-6 items-start">
+					<div
+						class="w-12 h-12 rounded-full bg-gradient-to-br from-[#b93d5e] to-[#9c2d4b] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+						3
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-display font-semibold mb-2">Adapt & Evolve</h3>
+						<p class="text-stone-600 leading-relaxed">
+							As the campaign progresses, the story adapts to your party's choices, character arcs, and
+							the emergent narrative you create together.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Interested in Fully Custom? -->
+	<Section background="gradient" padding="xl">
+		<div class="text-center max-w-3xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display mb-6">Want a Fully Custom Experience?</h2>
+			<p class="text-xl text-stone-600 mb-8">
+				Interested in a campaign built specifically around your group's preferences, themes, and character
+				concepts? Let's talk about creating something truly unique.
+			</p>
+			<Button variant="primary" href="/contact" size="lg">Get in Touch</Button>
+		</div>
+	</Section>
+</BaseLayout>

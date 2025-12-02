@@ -1,45 +1,51 @@
 ---
-import { SITE_TITLE, NAV_LINKS } from '../consts';
+import {SITE_TITLE, NAV_LINKS} from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import MobileNav from './MobileNav.astro';
 ---
 
 <header class="sticky top-0 z-20 bg-white/95 backdrop-blur-lg border-b border-stone-200 transition-shadow duration-250">
-  <div class="max-w-screen-2xl mx-auto px-6">
-    <nav class="flex items-center justify-between h-18">
-      <div class="logo">
-        <a href="/" class="flex items-center no-underline hover:opacity-80 transition-opacity duration-150">
-          <span class="font-[family-name:var(--font-family-display)] text-xl font-bold bg-gradient-to-r from-[#9c2d4b] to-[#cf5d77] bg-clip-text text-transparent">
+	<div class="max-w-screen-2xl mx-auto px-6">
+		<nav class="flex items-center justify-between h-18">
+			<div class="logo">
+				<a href="/" class="flex items-center no-underline hover:opacity-80 transition-opacity duration-150">
+          <span
+			  class="font-[family-name:var(--font-family-display)] text-xl font-bold bg-gradient-to-r from-[#9c2d4b] to-[#cf5d77] bg-clip-text text-transparent">
             {SITE_TITLE}
           </span>
-        </a>
-      </div>
+				</a>
+			</div>
 
-      <div class="hidden md:flex items-center gap-1">
-        {NAV_LINKS.map((link) => (
-          <HeaderLink href={link.href}>{link.text}</HeaderLink>
-        ))}
-      </div>
+			<div class="hidden md:flex items-center gap-1">
+				{NAV_LINKS.map((link) => (
+					<HeaderLink href={link.href}>{link.text}</HeaderLink>
+				))}
+			</div>
 
-      <button class="md:hidden p-2 text-stone-700 hover:text-[#b93d5e] transition-colors duration-150" aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </nav>
-  </div>
+			<button id="mobile-menu-open" class="md:hidden p-2 text-stone-700 hover:text-[#b93d5e] transition-colors duration-150"
+					aria-label="Toggle menu">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+					 stroke-linecap="round" stroke-linejoin="round">
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg>
+			</button>
+		</nav>
+	</div>
 </header>
 
-<script>
-  // Add shadow on scroll
-  const header = document.querySelector('header');
+<MobileNav />
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header?.classList.add('shadow-md');
-    } else {
-      header?.classList.remove('shadow-md');
-    }
-  });
+<script>
+	// Add shadow on scroll
+	const header = document.querySelector('header');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 10) {
+			header?.classList.add('shadow-md');
+		} else {
+			header?.classList.remove('shadow-md');
+		}
+	});
 </script>

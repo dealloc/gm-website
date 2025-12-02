@@ -1,0 +1,100 @@
+---
+import {NAV_LINKS} from '../consts';
+---
+
+<div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+	<div class="fixed inset-0 bg-stone-900/50 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out" id="mobile-menu-backdrop"></div>
+
+	<nav class="fixed top-0 right-0 bottom-0 w-[280px] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu-panel">
+		<div class="flex items-center justify-between p-6 border-b border-stone-200">
+			<span class="font-[family-name:var(--font-family-display)] text-lg font-bold bg-gradient-to-r from-[#9c2d4b] to-[#cf5d77] bg-clip-text text-transparent">
+				Menu
+			</span>
+			<button id="mobile-menu-close" class="p-2 text-stone-700 hover:text-[#b93d5e] transition-colors duration-150" aria-label="Close menu">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col p-4">
+			{NAV_LINKS.map((link) => (
+				<a
+					href={link.href}
+					class="mobile-nav-link px-4 py-3 rounded-lg text-stone-700 hover:bg-stone-50 hover:text-[#b93d5e] transition-all duration-150 font-medium"
+					data-href={link.href}
+				>
+					{link.text}
+				</a>
+			))}
+		</div>
+	</nav>
+</div>
+
+<script>
+	function initMobileMenu() {
+		const mobileMenu = document.getElementById('mobile-menu');
+		const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+		const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+		const openButton = document.getElementById('mobile-menu-open');
+		const closeButton = document.getElementById('mobile-menu-close');
+		const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+		if (!mobileMenu || !mobileMenuPanel || !openButton || !closeButton) return;
+
+		// Highlight active link
+		const currentPath = window.location.pathname;
+		mobileNavLinks.forEach(link => {
+			const href = link.getAttribute('data-href');
+			if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
+				link.classList.add('bg-[#fdf4f5]', 'text-[#b93d5e]');
+			}
+		});
+
+		function openMenu() {
+			mobileMenu?.classList.remove('hidden');
+			document.body.style.overflow = 'hidden';
+			// Trigger reflow to enable transition
+			requestAnimationFrame(() => {
+				requestAnimationFrame(() => {
+					mobileMenuBackdrop?.classList.remove('opacity-0');
+					mobileMenuBackdrop?.classList.add('opacity-100');
+					mobileMenuPanel?.classList.remove('translate-x-full');
+				});
+			});
+		}
+
+		function closeMenu() {
+			mobileMenuBackdrop?.classList.remove('opacity-100');
+			mobileMenuBackdrop?.classList.add('opacity-0');
+			mobileMenuPanel?.classList.add('translate-x-full');
+			document.body.style.overflow = '';
+			setTimeout(() => {
+				mobileMenu?.classList.add('hidden');
+			}, 300);
+		}
+
+		openButton.addEventListener('click', openMenu);
+		closeButton.addEventListener('click', closeMenu);
+		mobileMenuBackdrop?.addEventListener('click', closeMenu);
+
+		// Close on link click
+		mobileNavLinks.forEach(link => {
+			link.addEventListener('click', closeMenu);
+		});
+
+		// Close on escape key
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && !mobileMenu?.classList.contains('hidden')) {
+				closeMenu();
+			}
+		});
+	}
+
+	// Initialize on page load
+	initMobileMenu();
+
+	// Re-initialize after view transitions
+	document.addEventListener('astro:after-swap', initMobileMenu);
+</script>

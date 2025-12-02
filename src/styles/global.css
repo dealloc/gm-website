@@ -2,78 +2,78 @@
  * Global Styles - Pathfinder 2E GM Services
  * Tailwind v4 with custom design system
  */
-
-@import "tailwindcss";
-
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ============================================
    Design System - Custom Theme
    ============================================ */
 
 @theme {
-  /* Colors - Primary (Rich Fantasy Purple/Burgundy) */
-  --color-primary-50: #fdf4f5;
-  --color-primary-100: #fbe8eb;
-  --color-primary-200: #f6d5db;
-  --color-primary-300: #edb2bd;
-  --color-primary-400: #e08899;
-  --color-primary-500: #cf5d77;
-  --color-primary-600: #b93d5e;
-  --color-primary-700: #9c2d4b;
-  --color-primary-800: #832943;
-  --color-primary-900: #70273d;
+    /* Colors - Primary (Rich Fantasy Purple/Burgundy) */
+    --color-primary-50: #fdf4f5;
+    --color-primary-100: #fbe8eb;
+    --color-primary-200: #f6d5db;
+    --color-primary-300: #edb2bd;
+    --color-primary-400: #e08899;
+    --color-primary-500: #cf5d77;
+    --color-primary-600: #b93d5e;
+    --color-primary-700: #9c2d4b;
+    --color-primary-800: #832943;
+    --color-primary-900: #70273d;
 
-  /* Colors - Secondary (Deep Teal/Blue) */
-  --color-secondary-50: #f0fdfc;
-  --color-secondary-100: #ccfbf8;
-  --color-secondary-200: #99f6f0;
-  --color-secondary-300: #5fe9e0;
-  --color-secondary-400: #2dd4ca;
-  --color-secondary-500: #14b8b0;
-  --color-secondary-600: #0d9390;
-  --color-secondary-700: #107574;
-  --color-secondary-800: #125d5e;
-  --color-secondary-900: #144d4e;
+    /* Colors - Secondary (Deep Teal/Blue) */
+    --color-secondary-50: #f0fdfc;
+    --color-secondary-100: #ccfbf8;
+    --color-secondary-200: #99f6f0;
+    --color-secondary-300: #5fe9e0;
+    --color-secondary-400: #2dd4ca;
+    --color-secondary-500: #14b8b0;
+    --color-secondary-600: #0d9390;
+    --color-secondary-700: #107574;
+    --color-secondary-800: #125d5e;
+    --color-secondary-900: #144d4e;
 
-  /* Colors - Accent (Gold) */
-  --color-accent-50: #fffbeb;
-  --color-accent-100: #fef3c7;
-  --color-accent-200: #fde68a;
-  --color-accent-300: #fcd34d;
-  --color-accent-400: #fbbf24;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
-  --color-accent-700: #b45309;
-  --color-accent-800: #92400e;
-  --color-accent-900: #78350f;
+    /* Colors - Accent (Gold) */
+    --color-accent-50: #fffbeb;
+    --color-accent-100: #fef3c7;
+    --color-accent-200: #fde68a;
+    --color-accent-300: #fcd34d;
+    --color-accent-400: #fbbf24;
+    --color-accent-500: #f59e0b;
+    --color-accent-600: #d97706;
+    --color-accent-700: #b45309;
+    --color-accent-800: #92400e;
+    --color-accent-900: #78350f;
 
-  /* Colors - Status */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
+    /* Colors - Status */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
 
-  /* Font Families */
-  --font-family-display: 'Cinzel', ui-serif, Georgia, serif;
-  --font-family-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    /* Font Families */
+    --font-family-display: 'Cinzel', ui-serif, Georgia, serif;
+    --font-family-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  /* Spacing (extends defaults) */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
+    /* Spacing (extends defaults) */
+    --spacing-18: 4.5rem;
+    --spacing-22: 5.5rem;
 
-  /* Border Radius (extends defaults) */
-  --radius-2xl: 1.5rem;
+    /* Border Radius (extends defaults) */
+    --radius-2xl: 1.5rem;
 
-  /* Shadows (extends defaults) */
-  --shadow-glow-primary: 0 0 20px var(--color-primary-500);
-  --shadow-glow-accent: 0 0 20px var(--color-accent-400);
+    /* Shadows (extends defaults) */
+    --shadow-glow-primary: 0 0 20px var(--color-primary-500);
+    --shadow-glow-accent: 0 0 20px var(--color-accent-400);
 
-  /* Animations */
-  --animate-duration-fast: 150ms;
-  --animate-duration-base: 250ms;
-  --animate-duration-slow: 350ms;
+    /* Animations */
+    --animate-duration-fast: 150ms;
+    --animate-duration-base: 250ms;
+    --animate-duration-slow: 350ms;
 }
 
 /* ============================================
@@ -81,13 +81,13 @@
    ============================================ */
 
 @layer base {
-  body {
-    @apply font-[family-name:var(--font-family-body)] text-stone-800 bg-stone-50;
-  }
+    body {
+        @apply font-[family-name:var(--font-family-body)] text-stone-800 bg-stone-50;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-[family-name:var(--font-family-display)] font-bold text-stone-900;
-  }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-[family-name:var(--font-family-display)] font-bold text-stone-900;
+    }
 }
 
 /* ============================================
@@ -95,75 +95,191 @@
    ============================================ */
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
 }
 
 /* Animation utilities */
 .animate-fade-in {
-  animation: fade-in var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fade-in var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-slide-up {
-  animation: slide-up var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slide-up var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-slide-in-right {
-  animation: slide-in-right var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slide-in-right var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-scale-in {
-  animation: scale-in var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
+    animation: scale-in var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
 
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Loading skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f5f5f4 0%, #e7e5e4 50%, #f5f5f4 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+    border-radius: 0.5rem;
+}
+
+/* Focus visible styles for accessibility */
+.focus-ring:focus-visible {
+    outline: 2px solid var(--color-primary-600);
+    outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+    transition: all var(--animate-duration-base) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Screen reader only utility */
 .sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* View Transition API customization */
+@view-transition {
+    navigation: auto;
+}
+
+/* Customize the default cross-fade animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.3s;
+}
+
+::view-transition-old(root) {
+    animation: slide-out 0.3s ease-in;
+}
+
+::view-transition-new(root) {
+    animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

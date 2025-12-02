@@ -1,0 +1,140 @@
+---
+import {getCollection} from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+import CampaignGrid from '../../components/CampaignGrid.astro';
+
+// Get all campaigns, sorted by priority (highest first) and then by publish date
+const allCampaigns = await getCollection('campaigns');
+const campaigns = allCampaigns.sort((a, b) => {
+    return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+});
+
+// Group campaigns by type
+const adventurePaths = campaigns.filter(c => c.data.campaignType === 'adventure-path');
+const oneShots = campaigns.filter(c => c.data.campaignType === 'one-shot');
+const customCampaigns = campaigns.filter(c => c.data.campaignType === 'custom');
+const standalones = campaigns.filter(c => c.data.campaignType === 'standalone');
+
+// Stats
+const totalCampaigns = campaigns.length;
+---
+
+<BaseLayout
+        title="Browse Campaigns"
+        description="Explore our collection of professionally-run Pathfinder 2E campaigns. From epic adventure paths to quick one-shots, find your next adventure."
+>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-stone-50 to-white py-16 md:py-24">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Browse Our
+                    <span class="block bg-gradient-to-r from-[#9c2d4b] to-[#cf5d77] bg-clip-text text-transparent">
+            Campaigns
+          </span>
+                </h1>
+                <p class="text-xl text-stone-600 mb-8">
+                    Choose from {totalCampaigns} professionally-prepared Pathfinder 2E campaigns. From epic multi-part
+                    adventure paths to exciting one-shots, there's an adventure for every play style.
+                </p>
+
+                <!-- Quick Stats -->
+                <div class="flex flex-wrap gap-6">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-stone-200">
+                        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                        <span class="text-sm font-medium text-stone-700">{totalCampaigns} Available Now</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-stone-200">
+                        <svg class="w-4 h-4 text-[#9c2d4b]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                        <span class="text-sm font-medium text-stone-700">All Experience Levels</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-stone-200">
+                        <svg class="w-4 h-4 text-[#107574]" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-sm font-medium text-stone-700">Foundry VTT Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Paths -->
+    {adventurePaths.length > 0 && (
+            <Section background="white" padding="xl">
+                <div class="mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Adventure Paths</h2>
+                    <p class="text-lg text-stone-600">
+                        Multi-part epic campaigns that take characters on extended journeys
+                    </p>
+                </div>
+                <CampaignGrid campaigns={adventurePaths}/>
+            </Section>
+    )}
+
+    <!-- One-Shots -->
+    {oneShots.length > 0 && (
+            <Section background="stone" padding="xl">
+                <div class="mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">One-Shots</h2>
+                    <p class="text-lg text-stone-600">
+                        Complete adventures in a single session, perfect for trying out the system
+                    </p>
+                </div>
+                <CampaignGrid campaigns={oneShots}/>
+            </Section>
+    )}
+
+    <!-- Custom Campaigns -->
+    {standalones.length > 0 && (
+            <Section background="white" padding="xl">
+                <div class="mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Custom Campaigns</h2>
+                    <p class="text-lg text-stone-600">
+                        Original homebrew adventures crafted for unique experiences
+                    </p>
+                </div>
+                <CampaignGrid campaigns={standalones}/>
+            </Section>
+    )}
+
+    <!-- Custom Campaigns -->
+    {customCampaigns.length > 0 && (
+            <Section background="white" padding="xl">
+                <div class="mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Custom Campaigns</h2>
+                    <p class="text-lg text-stone-600">
+                        Original homebrew adventures crafted for unique experiences
+                    </p>
+                </div>
+                <CampaignGrid campaigns={customCampaigns}/>
+            </Section>
+    )}
+
+    <!-- CTA Section -->
+    <Section background="gradient" padding="xl">
+        <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Can't Find What You're Looking For?
+            </h2>
+            <p class="text-lg text-stone-600 mb-8">
+                We also offer custom campaign development tailored to your group's interests and playstyle.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/services"
+                   class="inline-flex items-center justify-center px-6 py-3 bg-[#b93d5e] text-white font-semibold rounded-lg hover:bg-[#9c2d4b] transition-colors">
+                    Explore Custom Services
+                </a>
+                <a href="/contact"
+                   class="inline-flex items-center justify-center px-6 py-3 border-2 border-stone-300 text-stone-700 font-semibold rounded-lg hover:border-[#b93d5e] hover:text-[#b93d5e] transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </Section>
+</BaseLayout>

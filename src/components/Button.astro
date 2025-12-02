@@ -1,43 +1,44 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  href?: string;
-  type?: 'button' | 'submit' | 'reset';
-  class?: string;
-  [key: string]: any;
+	variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+	size?: 'sm' | 'md' | 'lg';
+	href?: string;
+	type?: 'button' | 'submit' | 'reset';
+	class?: string;
+
+	[key: string]: any;
 }
 
 const {
-  variant = 'primary',
-  size = 'md',
-  href,
-  type = 'button',
-  class: className,
-  ...rest
+	variant = 'primary',
+	size = 'md',
+	href,
+	type = 'button',
+	class: className,
+	...rest
 } = Astro.props;
 
-const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-250 no-underline';
+const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-250 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2';
 
 const variantClasses = {
-  primary: 'bg-gradient-to-r from-[#b93d5e] to-[#9c2d4b] text-white hover:from-[#9c2d4b] hover:to-[#832943] hover:shadow-lg hover:-translate-y-0.5',
-  secondary: 'bg-gradient-to-r from-[#0d9390] to-[#107574] text-white hover:from-[#107574] hover:to-[#125d5e] hover:shadow-lg hover:-translate-y-0.5',
-  outline: 'border-2 border-[#b93d5e] text-[#b93d5e] hover:bg-[#b93d5e] hover:text-white',
-  ghost: 'text-[#b93d5e] hover:bg-[#fbe8eb]'
+	primary: 'bg-gradient-to-r from-[#b93d5e] to-[#9c2d4b] text-white hover:from-[#9c2d4b] hover:to-[#832943] hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-[#b93d5e]',
+	secondary: 'bg-gradient-to-r from-[#0d9390] to-[#107574] text-white hover:from-[#107574] hover:to-[#125d5e] hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-[#0d9390]',
+	outline: 'border-2 border-[#b93d5e] text-[#b93d5e] hover:bg-[#b93d5e] hover:text-white focus-visible:outline-[#b93d5e]',
+	ghost: 'text-[#b93d5e] hover:bg-[#fbe8eb] focus-visible:outline-[#b93d5e]'
 };
 
 const sizeClasses = {
-  sm: 'px-4 py-2 text-sm rounded-lg',
-  md: 'px-6 py-3 text-base rounded-lg',
-  lg: 'px-8 py-4 text-lg rounded-xl'
+	sm: 'px-4 py-2 text-sm rounded-lg',
+	md: 'px-6 py-3 text-base rounded-lg',
+	lg: 'px-8 py-4 text-lg rounded-xl'
 };
 
 const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className || ''}`;
 
 const Element = href ? 'a' : 'button';
-const elementProps = href ? { href } : { type };
+const elementProps = href ? {href} : {type};
 ---
 
 <Element class={classes} {...elementProps} {...rest}>
-  <slot />
+	<slot/>
 </Element>

@@ -1,0 +1,163 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import {Image} from 'astro:assets';
+import Badge from '../components/Badge.astro';
+import Button from '../components/Button.astro';
+import CampaignMeta from '../components/CampaignMeta.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	image: any;
+	campaign: {
+		data: {
+			campaignType: 'adventure-path' | 'one-shot' | 'custom';
+			levelRange: { min: number; max: number };
+			parts: number;
+			tags: string[];
+			status: 'available' | 'full' | 'upcoming' | 'archived';
+			sessionDuration: string;
+			playersMin: number;
+			playersMax: number;
+			publisher?: string;
+		};
+		id: string;
+	};
+}
+
+const {title, description, image, campaign} = Astro.props;
+const {data, id} = campaign;
+
+// Status badge variant
+const statusVariant = {
+	'available': 'success',
+	'full': 'error',
+	'upcoming': 'info',
+	'archived': 'default'
+}[data.status] as 'success' | 'error' | 'info' | 'default';
+
+// Status text
+const statusText = {
+	'available': 'Accepting Players',
+	'full': 'Campaign Full',
+	'upcoming': 'Coming Soon',
+	'archived': 'Archived'
+}[data.status];
+---
+
+<BaseLayout title={title} description={description} image={image}>
+	<!-- Hero Section with Image -->
+	<section class="relative h-[60vh] min-h-[400px] flex items-end bg-stone-900">
+		<Image
+			transition:name={id}
+			src={image}
+			alt={title}
+			class="absolute inset-0 w-full h-full object-cover opacity-60"
+			width={1920}
+			height={1080}
+		/>
+
+		<!-- Gradient Overlay -->
+		<div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/50 to-transparent"></div>
+
+		<!-- Content -->
+		<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 pb-12">
+			<div class="max-w-4xl">
+				<!-- Status Badge -->
+				<Badge variant={statusVariant} size="md" class="mb-4">
+					{statusText}
+				</Badge>
+
+				<!-- Title -->
+				<h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+					{title}
+				</h1>
+
+				<!-- Description -->
+				<p class="text-xl text-white/90 mb-6 max-w-3xl">
+					{description}
+				</p>
+
+				<!-- CTA Buttons -->
+				<div class="flex flex-col sm:flex-row gap-4">
+					{data.status === 'available' && (
+						<Button variant="primary" href={`/booking/${id}`} size="lg">
+							Sign Up for This Campaign
+						</Button>
+					)}
+					<Button variant="outline" href="/campaigns" size="lg"
+							class="!border-white !text-white hover:!bg-white hover:!text-stone-900">
+						Browse All Campaigns
+					</Button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12 md:py-16">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+				<!-- Main Content Column -->
+				<div class="lg:col-span-2 space-y-8">
+					<!-- Tags -->
+					<div class="flex flex-wrap gap-2">
+						{data.tags.map((tag) => (
+							<Badge variant="default">
+								{tag}
+							</Badge>
+						))}
+					</div>
+
+					<!-- Campaign Content (markdown) -->
+					<div class="prose prose-stone max-w-none">
+						<slot/>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="space-y-6">
+					<!-- Campaign Meta -->
+					<CampaignMeta
+						levelRange={data.levelRange}
+						parts={data.parts}
+						sessionDuration={data.sessionDuration}
+						playersMin={data.playersMin}
+						playersMax={data.playersMax}
+						campaignType={data.campaignType}
+						publisher={data.publisher}
+					/>
+
+					<!-- Sticky CTA Card -->
+					<div
+						class="sticky top-24 p-6 bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] rounded-xl border border-[#b93d5e]/20">
+						<h3 class="text-xl font-bold text-stone-900 mb-2">Ready to Join?</h3>
+						<p class="text-stone-700 mb-4 text-sm">
+							Sign up now to reserve your spot in this campaign.
+						</p>
+						{data.status === 'available' ? (
+							<Button variant="primary" href={`/booking/${id}`} class="w-full">
+								Sign Up Now
+							</Button>
+						) : (
+							<Button variant="outline" href="/campaigns" class="w-full">
+								View Other Campaigns
+							</Button>
+						)}
+					</div>
+
+					<!-- Help Card -->
+					<div class="p-6 bg-stone-50 rounded-xl border border-stone-200">
+						<h3 class="font-semibold text-stone-900 mb-2">Need Help?</h3>
+						<p class="text-sm text-stone-600 mb-4">
+							Have questions about this campaign or Pathfinder 2E in general?
+						</p>
+						<Button variant="outline" href="/contact" size="sm" class="w-full">
+							Contact Us
+						</Button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

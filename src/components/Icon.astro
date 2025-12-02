@@ -1,31 +1,32 @@
 ---
 /**
- * Icon component - wrapper for lucide-astro icons
- * Usage: <Icon name="Home" size={24} class="text-primary-600" />
- */
+	* Icon component - wrapper for lucide-astro icons
+	* Usage: <Icon name="Home" size={24} class="text-primary-600" />
+	*/
 
 interface Props {
-  name: string;
-  size?: number;
-  class?: string;
-  [key: string]: any;
+	name: string;
+	size?: number;
+	class?: string;
+
+	[key: string]: any;
 }
 
 const {
-  name,
-  size = 24,
-  class: className,
-  ...rest
+	name,
+	size = 24,
+	class: className,
+	...rest
 } = Astro.props;
 
 // Dynamically import the icon component
-const icons = import.meta.glob('lucide-astro/icons/*.astro', { eager: true });
+const icons = import.meta.glob('lucide-astro/icons/*.astro', {eager: true});
 const iconPath = `lucide-astro/icons/${name}.astro`;
 const IconComponent = icons[iconPath]?.default;
 ---
 
 {IconComponent ? (
-  <IconComponent size={size} class={className} {...rest} />
-) : (
-  <span class="text-red-500">Icon "{name}" not found</span>
-)}
+<IconComponent size={size} class={className} {...rest}/>
+	) : (
+<span class="text-red-500">Icon "{name}" not found</span>
+	)}

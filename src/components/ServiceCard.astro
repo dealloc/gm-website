@@ -1,0 +1,57 @@
+---
+interface Props {
+	icon: string;
+	title: string;
+	description: string;
+	features?: string[];
+	note?: string;
+}
+
+const {icon, title, description, features = [], note} = Astro.props;
+---
+
+<div
+	class="bg-white rounded-2xl p-8 border border-stone-200 hover:border-[#b93d5e] transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+	<!-- Header -->
+	<div class="flex items-start gap-4 mb-6">
+		<div
+			class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#fbe8eb] to-[#fdf4f5] flex items-center justify-center text-3xl flex-shrink-0">
+			{icon}
+		</div>
+		<div class="flex-1">
+			<h3 class="text-2xl font-display font-semibold text-stone-900">
+				{title}
+			</h3>
+		</div>
+	</div>
+
+	<!-- Description -->
+	<p class="text-stone-600 leading-relaxed mb-6">
+		{description}
+	</p>
+
+	<!-- Features -->
+	{features.length > 0 && (
+		<ul class="space-y-2 mb-6 flex-1">
+			{features.map((feature) => (
+				<li class="flex items-start gap-2 text-stone-700">
+					<svg class="w-5 h-5 text-[#b93d5e] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd"
+							  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+							  clip-rule="evenodd"></path>
+					</svg>
+					<span>{feature}</span>
+				</li>
+			))}
+		</ul>
+	)}
+
+	<!-- Note -->
+	{note && (
+		<div class="mt-auto pt-4 border-t border-stone-200">
+			<p class="text-sm text-stone-500 italic">
+				{note}
+			</p>
+		</div>
+	)}
+</div>

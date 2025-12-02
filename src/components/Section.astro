@@ -1,38 +1,38 @@
 ---
 interface Props {
-  background?: 'white' | 'stone' | 'gradient';
-  padding?: 'sm' | 'md' | 'lg' | 'xl';
-  containerSize?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
-  class?: string;
+	background?: 'white' | 'stone' | 'gradient';
+	padding?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+	containerSize?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+	class?: string;
 }
 
 const {
-  background = 'white',
-  padding = 'lg',
-  containerSize = 'xl',
-  class: className,
+	background = 'white',
+	padding = 'lg',
+	containerSize = 'xl',
+	class: className,
 } = Astro.props;
 
 const backgroundClasses = {
-  white: 'bg-white',
-  stone: 'bg-stone-50',
-  gradient: 'bg-gradient-to-b from-white to-stone-50'
+	white: 'bg-white',
+	stone: 'bg-stone-50',
+	gradient: 'bg-gradient-to-b from-white to-stone-50'
 };
 
 const paddingClasses = {
-  sm: 'py-8',
-  md: 'py-12',
-  lg: 'py-16',
-  xl: 'py-24'
+	sm: 'py-8',
+	md: 'py-12',
+	lg: 'py-16',
+	xl: 'py-24'
 };
 
 const containerClasses = {
-  sm: 'max-w-screen-sm',
-  md: 'max-w-screen-md',
-  lg: 'max-w-screen-lg',
-  xl: 'max-w-screen-xl',
-  '2xl': 'max-w-screen-2xl',
-  full: 'max-w-full'
+	sm: 'max-w-screen-sm',
+	md: 'max-w-screen-md',
+	lg: 'max-w-screen-lg',
+	xl: 'max-w-screen-xl',
+	'2xl': 'max-w-screen-2xl',
+	full: 'max-w-full'
 };
 
 const sectionClasses = `${backgroundClasses[background]} ${paddingClasses[padding]} ${className || ''}`;
@@ -40,7 +40,7 @@ const containerClass = `${containerClasses[containerSize]} mx-auto px-6`;
 ---
 
 <section class={sectionClasses}>
-  <div class={containerClass}>
-    <slot />
-  </div>
+	<div class={containerClass}>
+		<slot/>
+	</div>
 </section>

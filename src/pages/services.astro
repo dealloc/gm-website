@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout
+	title="Services | Your Campaign Elevated"
+	description="Professional Foundry VTT services including custom maps, automation, tokens, ambience, and more to bring your Pathfinder 2E campaigns to life."
+>
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-[#fdf4f5] via-white to-[#f0fdfc] py-20 md:py-32">
+		<div class="max-w-screen-xl mx-auto px-6 text-center">
+			<h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+				Your Campaign,
+				<span class="block bg-gradient-to-r from-[#9c2d4b] to-[#107574] bg-clip-text text-transparent">
+          Elevated
+        </span>
+			</h1>
+			<p class="text-xl md:text-2xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
+				Professional Foundry VTT services to enhance every aspect of your Pathfinder 2E experience
+			</p>
+		</div>
+	</section>
+
+	<!-- Services Grid -->
+	<Section background="white" padding="xl">
+		<div class="mb-16">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-4">What We Offer</h2>
+			<p class="text-xl text-stone-600 text-center max-w-2xl mx-auto">
+				Every campaign includes professional-grade tools and customization to create an immersive tabletop
+				experience
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<ServiceCard
+				icon="🎮"
+				title="Foundry VTT Integration"
+				description="Experience the power of Foundry VTT with fully-configured campaigns, automated mechanics, and seamless online play."
+				features={[
+					'Pre-configured campaign modules',
+					'Automated combat and spell effects',
+					'Token vision and lighting systems',
+					'Character sheet integration',
+					'Real-time dice rolling and actions'
+				]}
+			/>
+
+			<ServiceCard
+				icon="🗺️"
+				title="Custom Maps"
+				description="Every encounter features hand-crafted or professionally-sourced battle maps with dynamic lighting, walls, and interactive elements."
+				features={[
+					'High-resolution battle maps',
+					'Dynamic lighting and fog of war',
+					'Layered environmental effects',
+					'Interactive doors and objects',
+					'Optimized for online performance'
+				]}
+			/>
+
+			<ServiceCard
+				icon="🎵"
+				title="Immersive Ambience"
+				description="Set the perfect mood with curated soundscapes, music, and audio effects that respond to the action at your table."
+				features={[
+					'Scene-specific music and ambience',
+					'Combat and exploration soundtracks',
+					'Environmental sound effects',
+					'Volume-controlled audio layers',
+					'Syrinscape integration available'
+				]}
+				note="Advanced audio features may require additional licensing for some content"
+			/>
+
+			<ServiceCard
+				icon="⚙️"
+				title="Code & Automation"
+				description="Custom macros, automation scripts, and quality-of-life improvements that streamline gameplay and reduce bookkeeping."
+				features={[
+					'Custom macro library',
+					'Automated conditions and effects',
+					'Quick action buttons for common tasks',
+					'Initiative and turn management',
+					'Encounter balancing tools'
+				]}
+			/>
+
+			<ServiceCard
+				icon="🎭"
+				title="Custom Tokens & Token Rings"
+				description="Unique character tokens with animated borders and status indicators that make every character stand out on the battlefield."
+				features={[
+					'Character portrait tokens',
+					'Animated token borders and rings',
+					'Status effect overlays',
+					'NPC and monster tokens',
+					'Custom player token creation support'
+				]}
+			/>
+
+			<ServiceCard
+				icon="📚"
+				title="Customizable Journals"
+				description="Rich, hyperlinked journals with campaign notes, NPC information, lore, and player handouts all organized and accessible."
+				features={[
+					'Campaign wiki and lore database',
+					'NPC stat blocks and descriptions',
+					'Location and quest tracking',
+					'Player handouts and letters',
+					'Session recaps and notes'
+				]}
+			/>
+		</div>
+	</Section>
+
+	<!-- Why These Services Matter -->
+	<Section background="stone" padding="xl">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display text-center mb-12">Why It Matters</h2>
+
+			<div class="space-y-8">
+				<div class="bg-white rounded-xl p-8 border border-stone-200">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-[#9c2d4b]">Focus on the Story</h3>
+					<p class="text-stone-600 leading-relaxed">
+						With automation handling the mechanics, you can focus on roleplay, strategy, and memorable
+						moments. No more flipping through rulebooks or calculating modifiers—let the system do the work.
+					</p>
+				</div>
+
+				<div class="bg-white rounded-xl p-8 border border-stone-200">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-[#107574]">Immersion & Atmosphere</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Professional maps, lighting, and audio transform online play into a cinematic experience. Every
+						dungeon crawl, social encounter, and epic battle feels tangible and engaging.
+					</p>
+				</div>
+
+				<div class="bg-white rounded-xl p-8 border border-stone-200">
+					<h3 class="text-2xl font-display font-semibold mb-4 text-[#d97706]">Seamless Online Experience</h3>
+					<p class="text-stone-600 leading-relaxed">
+						Browser-based play means no downloads, no setup hassles, and crystal-clear visuals on any
+						device. Just click the link and you're at the table, ready to adventure.
+					</p>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- CTA Section -->
+	<Section background="white" padding="xl">
+		<div class="text-center max-w-3xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-display mb-6">Ready to Experience the Difference?</h2>
+			<p class="text-xl text-stone-600 mb-8">
+				All these services are included in every campaign at no additional cost
+			</p>
+			<Button variant="primary" href="/campaigns" size="lg">Browse Available Campaigns</Button>
+		</div>
+	</Section>
+</BaseLayout>
