@@ -1,6 +1,6 @@
 ---
 title: "Stolen Fate"
-description: "Race to gather and control the scattered cards of the Deck of Destiny, a powerful artifact that can reshape reality itself in this high-level adventure."
+description: "Not even destiny itself is safe when powerful forces seek to seize control of the future, and now it falls to a band of heroes selected by the power of a magical Harrow deck to step in and ensure that fate is not stolen from the world! Already noteworthy in their own right, this new band of adventurers finds themselves quickly swept up in a race to gather and control the scattered cards of a powerful, mysterious artifact tied to the destinies of all who live on Golarion. It's a race that must be won, for to lose means all possible futures fade save for one—a stolen fate meant to bring power to a very select few and leave the rest of reality in ruin! "
 campaignType: "adventure-path"
 levelRange:
   min: 11
@@ -10,11 +10,13 @@ tags: ["High Level", "Artifact", "Reality", "Epic", "Harrow", "Fate"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/stolen-fate.jpg"
 status: "available"
-priority: 8
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2023-03-26
+trailer: 'bLYhQ8fOLM4'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/6/6d/Stolen_Fate_logo.png/700px-Stolen_Fate_logo.png.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Stolen_Fate'
 ---
 
 ## Overview

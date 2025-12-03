@@ -1,6 +1,6 @@
 ---
 title: "Abomination Vaults"
-description: "Delve into the megadungeon beneath Gauntlight, uncovering the horrific experiments and dark secrets of the mad wizard Belcorra Haruvex."
+description: "Enter the megadungeon! Evil stirs in the depths of the Abomination Vaults, a sprawling dungeon where the evil sorcerer Belcorra Haruvex attempted to raise an army of monsters hundreds of years ago. Brave heroes must venture into a dungeon full of beasts and traps to prevent a spiteful villain from rising again. "
 campaignType: "adventure-path"
 levelRange:
   min: 1
@@ -10,16 +10,23 @@ tags: ["Megadungeon", "Horror", "Classic", "Dungeon Crawl", "Undead", "Gauntligh
 publisher: "Paizo"
 heroImage: "../../../src/assets/abomination-vaults.jpg"
 status: "available"
-priority: 10
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2021-01-27
+trailer: '9VE7y83tMVQ'
+contentWarnings: ["suicide", "ableism", "body horror", "human experimentation"]
+logoUrl: 'https://pathfinderwiki.com/w/images/7/7c/Abomination_Vaults_logo.png'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Abomination_Vaults_(adventure_path)'
 ---
 
 ## Overview
 
-Abomination Vaults is a classic megadungeon adventure path taking you deep beneath the ominous Gauntlight lighthouse. Explore the multi-level dungeon complex where the mad wizard Belcorra Haruvex conducted horrific experiments. Each level reveals new horrors, dark secrets, and terrible abominations as you descend deeper into one of Pathfinder 2E's most iconic dungeon crawls. Perfect for fans of traditional dungeon exploration with modern design.
+Abomination Vaults is the twenty-eighth Pathfinder Adventure Path and the first three-volume Pathfinder Adventure Path published by Paizo Inc.,
+and ran from January 2021 to March 2021. It is loosely tied to the Second Edition Pathfinder Beginner Box,
+which is also set in Otari, and provides an easier to manage first campaign for players and gamemasters.
+It is also focused on a large dungeon complex, something Paizo had wanted to do for some time,
+but Paizo considered that six volumes would be too much to keep interest in a single site.
 
 ## What to Expect
 

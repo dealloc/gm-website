@@ -20,6 +20,8 @@ interface Props {
 			playersMin: number;
 			playersMax: number;
 			publisher?: string;
+			trailer?: string;
+			contentWarnings?: string[];
 		};
 		id: string;
 	};
@@ -50,6 +52,7 @@ const statusText = {
 	<section class="relative h-[60vh] min-h-[400px] flex items-end bg-stone-900">
 		<Image
 			transition:name={id}
+			loading="eager"
 			src={image}
 			alt={title}
 			class="absolute inset-0 w-full h-full object-cover opacity-60"
@@ -81,7 +84,7 @@ const statusText = {
 				<!-- CTA Buttons -->
 				<div class="flex flex-col sm:flex-row gap-4">
 					{data.status === 'available' && (
-						<Button variant="primary" href={`/booking/${id}`} size="lg">
+						<Button variant="primary" href={`/contact?referrer=${id}`} size="lg">
 							Sign Up for This Campaign
 						</Button>
 					)}
@@ -109,6 +112,21 @@ const statusText = {
 						))}
 					</div>
 
+					<!-- Trailer Video -->
+					{data.trailer && (
+						<div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-bottom: 56.25%;">
+							<iframe
+								class="absolute inset-0 w-full h-full"
+								src={`https://www.youtube.com/embed/${data.trailer}`}
+								title={`Trailer: ${title}`}
+								frameborder="0" allow
+									="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen>
+							</iframe>
+						</div>
+					)}
+
 					<!-- Campaign Content (markdown) -->
 					<div class="prose prose-stone max-w-none">
 						<slot/>
@@ -128,6 +146,26 @@ const statusText = {
 						publisher={data.publisher}
 					/>
 
+					<!-- Content Warning Card -->
+					{data.contentWarnings && data.contentWarnings.length > 0 && (
+						<div class="p-6 bg-amber-50 rounded-xl border border-amber-200">
+							<h3 class="font-semibold text-amber-900 mb-2">Content Warning</h3>
+							<p class="text-sm text-amber-800 mb-3">
+								This campaign contains themes that may not be suitable for all players. Player consent is vital to a safe and fun experience for everyone.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-3">
+								{data.contentWarnings.map((warning) => (
+									<Badge variant="default" class="!bg-amber-100 !text-amber-900 !border-amber-300">
+										{warning}
+									</Badge>
+								))}
+							</div>
+							<p class="text-xs text-amber-700">
+								Please discuss these themes with your group before beginning and modify descriptions as appropriate.
+							</p>
+						</div>
+					)}
+
 					<!-- Sticky CTA Card -->
 					<div
 						class="sticky top-24 p-6 bg-gradient-to-br from-[#fbe8eb] to-[#f6d5db] rounded-xl border border-[#b93d5e]/20">
@@ -136,7 +174,7 @@ const statusText = {
 							Sign up now to reserve your spot in this campaign.
 						</p>
 						{data.status === 'available' ? (
-							<Button variant="primary" href={`/booking/${id}`} class="w-full">
+							<Button variant="primary" href={`/contact?referrer=${id}`} class="w-full">
 								Sign Up Now
 							</Button>
 						) : (

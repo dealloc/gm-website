@@ -1,6 +1,6 @@
 ---
 title: "Shades of Blood"
-description: "Investigate a mysterious column of shadow erupting from the sea in ancient Azlant and stop vampires from blotting out the sun forever."
+description: "Recruited as research assistants in anticipation of a rare celestial event, the PCs arrive on a remote island in the remnants of Azlant. While there, a column of shadow erupts from the sea and washes across the sky dimming the sun and unleashing shadowy monsters. Investigating the dangerous anomaly, the PCs discover a ruined Azlanti prison inhabited by vampires and learn that the column of shadow was only a test run for an ancient vampire planning to use Azlanti magical technology to blot out the sky, shielding the dangers of the sun so they can escape their island prison and reunite with their lover from the times before Earthfall. "
 campaignType: "adventure-path"
 levelRange:
   min: 1
@@ -10,11 +10,14 @@ tags: ["Vampires", "Azlant", "Horror", "Investigation", "Ancient Ruins"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/shades-of-blood.webp"
 status: "available"
-priority: 5
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2025-04-02
+trailer: '3ifJ25xt-dE'
+contentWarnings: ['Confinement', 'torture', 'intimate partner violence']
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/2/23/Shades_of_Blood_logo.webp/700px-Shades_of_Blood_logo.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Shades_of_Blood'
 ---
 
 ## Overview

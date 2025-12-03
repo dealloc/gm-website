@@ -9,11 +9,12 @@ tags: ["One-Shots", "Bounties", "Flexible", "Quick Play", "Variety", "Official"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/bounties.webp"
 status: "available"
-priority: 6
 sessionDuration: "2-3 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2020-08-26
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/d/d2/The_Whitefang_Wyrm.jpg/500px-The_Whitefang_Wyrm.jpg.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Pathfinder_Bounty'
 ---
 
 ## Overview

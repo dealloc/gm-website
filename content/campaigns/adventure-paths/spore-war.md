@@ -1,6 +1,6 @@
 ---
 title: "Spore War"
-description: "Face the demon lord Treerazer and his fungal armies threatening to consume the elven nation of Kyonin from the depths of Tanglebriar."
+description: "The demon Treerazer has long lurked in the wretched expanse of Tanglebriar, just south of the elven nation of Kyonin. Long ago, he tried to claim the nation as his own, but the elves pushed back and contained him. Today, many believe Treerazer to be exiled, trapped, imprisoned, or simply cowardly hunkering down in the swamp, afraid to attract attention or to trigger elven wrath once more. Those who believe this are about to learn just how dangerously wrong they are."
 campaignType: "adventure-path"
 levelRange:
   min: 11
@@ -10,11 +10,13 @@ tags: ["High Level", "Demons", "Elves", "Nature", "Epic", "Kyonin"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/spore-war.jpg"
 status: "available"
-priority: 7
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2025-01-08
+trailer: 'C8T4bMosOVU'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/2/29/Spore_War_logo.png/700px-Spore_War_logo.png.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Spore_War'
 ---
 
 ## Overview

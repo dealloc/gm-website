@@ -1,6 +1,6 @@
 ---
 title: "Crown of the Kobold King"
-description: "Defend Falcon's Hollow from threats including undead, kobolds, and a dangerous necromancer in this classic standalone adventure."
+description: "The town of Falcon's Hollow is no stranger to peril, yet the danger growing in the dungeons below a nearby ruin pose a threat that only a new band of heroes can face. Ravenous undead, cunning kobolds, and sinister necromancers are but a few of the foes that shall soon menace the small lumber town, yet none are potentially as dangerous as the Kobold King himself! "
 campaignType: "adventure"
 levelRange:
   min: 1
@@ -9,11 +9,12 @@ tags: ["Kobolds", "Undead", "Necromancer", "Classic", "Falcon's Hollow", "Standa
 publisher: "Paizo"
 heroImage: "../../../src/assets/crown-of-the-kobold-king.jpg"
 status: "available"
-priority: 5
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2007-07-01
+logoUrl: 'https://pathfinderwiki.com/w/images/b/b6/Crown_of_the_Kobold_King.jpg'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Crown_of_the_Kobold_King_(hardcover)'
 ---
 
 ## Overview

@@ -30,11 +30,23 @@ const campaigns = defineCollection({
             // Booking Info
             playersMin: z.number().default(3),
             playersMax: z.number().default(6),
+            sessionDuration: z.string().optional(),
+            parts: z.number().optional(),
 
             // SEO
             seoDescription: z.string().optional(),
             publishDate: z.coerce.date(),
             updatedDate: z.coerce.date().optional(),
+
+            // Media
+            trailer: z.string().optional(),
+
+            // Content Warnings
+            contentWarnings: z.array(z.string()).optional(),
+
+			// Additional information from the Pathfinder wiki
+			logoUrl: z.string().optional(),
+			wikiEntry: z.string().optional(),
         }),
 });
 

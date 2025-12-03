@@ -1,6 +1,6 @@
 ---
 title: "Gatewalkers"
-description: "Investigate a global amnesic episode as paranormal investigators, uncovering missing time and traveling across multiple realities to find the truth."
+description: "After they walked through that glowing gateway, nothing was ever the same. A band of characters become paranormal investigators in order to figure out the cause of a global amnesic episode. Their quest takes them to lands near, far, and outside of this reality altogether. Along the way, the characters meet fellow \"gatewalkers,\" defeat alien monsters, and explore strange realms also touched by the so-called Missing Moment. And when it comes time to learn the grim truth of what happened to them on that fated summer night, what then?"
 campaignType: "adventure-path"
 levelRange:
   min: 1
@@ -10,11 +10,13 @@ tags: ["Mystery", "Planar", "Amnesia", "Investigation", "Multiverse", "Paranorma
 publisher: "Paizo"
 heroImage: "../../../src/assets/gatewalkers.png"
 status: "available"
-priority: 7
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2023-01-25
+trailer: '494QBfcDQJY'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/7/74/Gatewalkers_logo.png/700px-Gatewalkers_logo.png.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Gatewalkers'
 ---
 
 ## Overview

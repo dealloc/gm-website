@@ -1,6 +1,6 @@
 ---
 title: "Pathfinder Beginner Box"
-description: "The perfect introduction to Pathfinder 2E with simplified rules, character creation tools, and an engaging introductory adventure for levels 1-4."
+description: "Will you be a courageous fighter, charging headfirst into battle, or a sly rogue, moving quietly to strike at foes from the shadows? Maybe you will be a knowledgeable wizard, wielding incredible arcane spells or a wise and pious cleric, using the power of your deity to shape the world for the better. It is all up to you! "
 campaignType: "adventure"
 levelRange:
   min: 1
@@ -9,16 +9,23 @@ tags: ["Beginner", "Tutorial", "New Players", "Simplified", "Introduction", "Tea
 publisher: "Paizo"
 heroImage: "../../../src/assets/beginner-box.webp"
 status: "available"
-priority: 10
 sessionDuration: "2-4 hours"
 playersMin: 3
 playersMax: 5
 publishDate: 2020-11-11
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/e/ef/Pathfinder_Beginner_Box_%28ORC%29.png/500px-Pathfinder_Beginner_Box_%28ORC%29.png.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Beginner_Box_(Second_Edition)'
 ---
 
 ## Overview
 
-The Pathfinder Beginner Box is the ideal entry point for new players and GMs to Pathfinder 2E. Featuring simplified rules, pre-generated characters, and a carefully designed introductory adventure, it teaches the fundamentals of the game while providing an engaging story. Progress from level 1 to 4 while learning the core mechanics in a welcoming, accessible environment designed specifically for newcomers.
+ake the first step into an amazing world of fantasy adventure!
+The Pathfinder Beginner Box contains everything you need to learn how to play the Pathfinder Roleplaying Game,
+including rules to create your own fantasy hero and tools to make your own amazing stories.
+
+Will you be a courageous fighter, charging headfirst into battle, or a sly rogue, moving quietly to strike at foes from the shadows?
+Maybe you will be a knowledgeable wizard, wielding incredible arcane spells or a wise and pious cleric,
+using the power of your deity to shape the world for the better. It is all up to you!
 
 ## What to Expect
 

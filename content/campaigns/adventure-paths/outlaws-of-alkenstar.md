@@ -1,20 +1,22 @@
 ---
 title: "Outlaws of Alkenstar"
-description: "Become gunslinging outlaws in Alkenstar's greasy alleyways, seeking revenge while navigating the dangerous world of black powder and betrayal."
+description: "A ragtag band of gunslinging outlaws get their hands dirty in the greasy alleyways and whisky-soaked saloons of Alkenstar, the City of Smog. To get revenge on the mogul who destroyed them, the renegades will have to stick up an illicit bank, foil a crooked shieldmarshal, and escort a reclusive inventor to safety. "
 campaignType: "adventure-path"
 levelRange:
   min: 1
-  max: 10
+  max: 11
 parts: 3
 tags: ["Gunslingers", "Urban", "Alkenstar", "Revenge", "Technology", "Crime"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/outlaws-of-alkenstar.jpg"
 status: "available"
-priority: 7
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2022-04-27
+trailer: 'PpOV0VuM3hg'
+logoUrl: 'https://pathfinderwiki.com/w/images/9/92/Outlaws_of_Alkenstar_logo.png'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Outlaws_of_Alkenstar'
 ---
 
 ## Overview

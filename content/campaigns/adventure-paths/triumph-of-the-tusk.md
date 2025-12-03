@@ -1,6 +1,6 @@
 ---
 title: "Triumph of the Tusk"
-description: "Join orc leader Ardax during the Flood Truce as diplomatic delegates gather in Belkzen, where tensions run high and ancient conflicts threaten peace."
+description: "For ages, the orcs of Belkzen have been marginalized, subjugated, and vilified, relegated to the rocky northern wastes. Yet in recent battles waged against their undead nemeses, orcs showed the world that they have a common enemy—the evil lich-lord known as the Whispering Tyrant. Now, openminded leaders like Ardax the White-Hair have initiated a grand diplomatic campaign to bury old grudges and forge alliances across the continent. There are few takers. "
 campaignType: "adventure-path"
 levelRange:
   min: 3
@@ -10,11 +10,13 @@ tags: ["Orcs", "Diplomacy", "Belkzen", "Political Intrigue", "Cultural"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/triumph-of-the-tusk.png"
 status: "available"
-priority: 6
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2024-10-30
+trailer: 'RxvK65p9nuo'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/3/3a/Triumph_of_the_Tusk_logo.webp/700px-Triumph_of_the_Tusk_logo.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Triumph_of_the_Tusk'
 ---
 
 ## Overview

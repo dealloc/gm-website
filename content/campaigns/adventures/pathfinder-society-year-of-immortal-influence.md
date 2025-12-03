@@ -9,11 +9,12 @@ tags: ["Pathfinder Society", "Organized Play", "Absalom", "Murder Mystery", "Inv
 publisher: "Paizo"
 heroImage: "../../../src/assets/immortal-influence.webp"
 status: "available"
-priority: 7
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2024-08-01
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/0/09/Year_of_Immortal_Influence_icon.webp/400px-Year_of_Immortal_Influence_icon.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Year_of_Immortal_Influence'
 ---
 
 ## Overview

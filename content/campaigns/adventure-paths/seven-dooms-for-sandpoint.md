@@ -1,6 +1,6 @@
 ---
 title: "Seven Dooms for Sandpoint"
-description: "Return to the iconic town of Sandpoint as it faces its greatest threat yet—seven interconnected dooms that could destroy the beloved coastal community."
+description: "The town of Sandpoint has seen more than its fair share of danger and trouble over the years, including harrowing fires, prolific serial killers, goblin raids, and attacks by giants and dragons, but what faces the so-called Light of the Lost Coast now is its greatest threat yet! Something sinister has been manipulating events all along, and now a new band of heroes must step in to save this legendary small town from seven deadly dooms! "
 campaignType: "adventure-path"
 levelRange:
   min: 4
@@ -10,16 +10,26 @@ tags: ["Sandpoint", "Classic Location", "Mystery", "Community Defense", "Nostalg
 publisher: "Paizo"
 heroImage: "../../../src/assets/seven-dooms-of-sandpoint.jpg"
 status: "available"
-priority: 8
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2024-03-08
+trailer: 'aazeY5gHZ74'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/f/f2/Seven_Dooms_for_Sandpoint_softcover.jpg/500px-Seven_Dooms_for_Sandpoint_softcover.jpg.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Seven_Dooms_for_Sandpoint'
 ---
 
 ## Overview
 
-Seven Dooms for Sandpoint brings players back to one of Pathfinder's most iconic locations. The peaceful coastal town of Sandpoint, familiar to many from Rise of the Runelords, now faces its greatest threat: seven interconnected dooms orchestrated by sinister forces. As mid-level heroes, you'll investigate these mounting catastrophes, uncover the conspiracy behind them, and fight to save the town and its beloved residents from total destruction.
+Back where it all began!
+
+This special, double sized volume presents a full Adventure Path in a single massive 200 page book to celebrate the 200th
+volume of the Pathfinder Adventure Path!
+
+Seven Dooms for Sandpoint brings players back to one of Pathfinder's most iconic locations.
+The peaceful coastal town of Sandpoint, familiar to many from Rise of the Runelords, now faces its greatest threat:
+seven interconnected dooms orchestrated by sinister forces. As mid-level heroes, you'll investigate these mounting catastrophes,
+uncover the conspiracy behind them, and fight to save the town and its beloved residents from total destruction.
 
 ## What to Expect
 

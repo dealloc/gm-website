@@ -1,8 +1,8 @@
 ---
 interface Props {
 	levelRange: { min: number; max: number };
-	parts: number;
-	sessionDuration: string;
+	parts?: number;
+	sessionDuration?: string;
 	playersMin: number;
 	playersMax: number;
 	campaignType: 'adventure-path' | 'one-shot' | 'custom';
@@ -26,7 +26,7 @@ const typeLabel = {
 }[campaignType];
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-stone-50 rounded-xl border border-stone-200">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 bg-stone-50 rounded-xl border border-stone-200">
 	<!-- Level Range -->
 	<div class="flex items-start gap-3">
 		<div class="w-10 h-10 rounded-lg bg-[#fbe8eb] flex items-center justify-center flex-shrink-0">
@@ -42,18 +42,20 @@ const typeLabel = {
 	</div>
 
 	<!-- Session Duration -->
-	<div class="flex items-start gap-3">
-		<div class="w-10 h-10 rounded-lg bg-[#ccfbf8] flex items-center justify-center flex-shrink-0">
-			<svg class="w-5 h-5 text-[#107574]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-					  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-			</svg>
+	{sessionDuration && (
+		<div class="flex items-start gap-3">
+			<div class="w-10 h-10 rounded-lg bg-[#ccfbf8] flex items-center justify-center flex-shrink-0">
+				<svg class="w-5 h-5 text-[#107574]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+				</svg>
+			</div>
+			<div>
+				<div class="text-sm text-stone-600 mb-1">Session Length</div>
+				<div class="font-semibold text-stone-900">{sessionDuration}</div>
+			</div>
 		</div>
-		<div>
-			<div class="text-sm text-stone-600 mb-1">Session Length</div>
-			<div class="font-semibold text-stone-900">{sessionDuration}</div>
-		</div>
-	</div>
+	)}
 
 	<!-- Players -->
 	<div class="flex items-start gap-3">

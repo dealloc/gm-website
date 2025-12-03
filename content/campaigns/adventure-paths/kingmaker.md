@@ -1,6 +1,6 @@
 ---
 title: "Kingmaker"
-description: "Build and rule your own kingdom from the ground up in this epic 1-20 adventure chronicling the rise of a new nation in the Stolen Lands."
+description: "The land rush is on! Sent south by Brevoy, the heroes have the unenviable task of venturing into the infamous Stolen Lands and annexing the territory, facing down monsters, bandits, and worse. It's hard enough to conquer territory—but does a ragtag band of adventurers have what it takes to found and defend a burgeoning kingdom from the terrors of the wild? "
 campaignType: "adventure-path"
 levelRange:
   min: 1
@@ -10,16 +10,29 @@ tags: ["Kingdom Building", "Epic", "Sandbox", "Political", "Stolen Lands", "Clas
 publisher: "Paizo"
 heroImage: "../../../src/assets/kingmaker.jpg"
 status: "available"
-priority: 10
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2010-03-31
+trailer: 'ClbWYVIBK9A'
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/b/ba/Kingmaker_logo.webp/700px-Kingmaker_logo.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Kingmaker_(adventure_path)'
 ---
 
 ## Overview
 
-Kingmaker is the definitive kingdom-building adventure path, fully updated for Pathfinder Second Edition. Start as adventurers exploring the untamed Stolen Lands and grow into rulers of your own nation. This sandbox campaign combines classic adventuring with kingdom management, where your choices shape not just your story but an entire realm. From humble beginnings to legendary rulers, you'll face bandits, monsters, fey politics, and the challenges of governance itself.
+The land rush is on! Sent south by Brevoy,
+the heroes have the unenviable task of venturing into the infamous Stolen Lands and annexing the territory,
+facing down monsters, bandits, and worse.
+It's hard enough to conquer territory—but does a ragtag band of adventurers have what it takes to found and defend a burgeoning kingdom from the terrors of the wild?
+
+The Kingmaker Adventure Path takes the heroes from encounters with mysterious bandit lords and barbaric raiders through
+the trials and tribulations of developing and defending their new settlement in the notoriously lawless River Kingdoms.
+Yet when war comes to the Stolen Lands in earnest, it's up the heroes to take up a mystical blade and stand tall against the horrors of man,
+beast, and strange creatures more dangerous than either...
+
+Note that if you've played the video game "Kingmaker" you'll unfortunately know most of the story, even if the adventure path
+slightly deviates from the video game.
 
 ## What to Expect
 

@@ -14,6 +14,8 @@ sessionDuration: "2-3 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2023-10-18
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/9/90/Rusthenge.jpg/500px-Rusthenge.jpg.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Rusthenge_(adventure)'
 ---
 
 ## Overview

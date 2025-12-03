@@ -1,6 +1,6 @@
 ---
 title: "Blood Lords"
-description: "Rise from skilled troubleshooters to join the Blood Lords who rule Geb, a land where the undead reign and the living are second-class citizens."
+description: "The undead nation of Geb gains most of its trade from the export of food grown on zombie-worked farms, but one farm has been the site of a series of strange occurrences. The Blood Lords Adventure Path, is a six-part, monthly campaign in which the characters rise from skilled troubleshooters to join the Blood Lords who rule a land of the dead."
 campaignType: "adventure-path"
 levelRange:
   min: 1
@@ -10,16 +10,23 @@ tags: ["Undead", "Geb", "Epic", "Evil Campaign", "Politics", "Dark Fantasy"]
 publisher: "Paizo"
 heroImage: "../../../src/assets/blood-lords.jpg"
 status: "available"
-priority: 9
 sessionDuration: "3-4 hours"
 playersMin: 4
 playersMax: 6
 publishDate: 2022-07-27
+contentWarnings: ['Torture', 'Undead', 'Death']
+logoUrl: 'https://pathfinderwiki.com/w/images/thumb/9/94/Blood_Lords_logo.png/700px-Blood_Lords_logo.png.webp'
+wikiEntry: 'https://pathfinderwiki.com/wiki/Blood_Lords_(adventure_path)'
 ---
 
 ## Overview
 
-Blood Lords is a unique full-length adventure path set in Geb, a nation ruled by the undead where death is merely a career change. Start as troubleshooters handling problems for the undead aristocracy and rise through the ranks to join the Blood Lords themselves—the council of powerful undead who rule this necrocratic nation. This morally complex campaign explores themes of power, undeath, and ambition in one of Golarion's most fascinating locations.
+Blood Lords is the thirty-third Pathfinder Adventure Path and ran from July 2022 to December 2022.
+Unlike most Adventure Paths, it is not sanctioned for Paizo Organized Play credit
+
+Blood Lords is a unique full-length adventure path set in Geb, a nation ruled by the undead where death is merely a career change. Start as troubleshooters handling problems for the undead aristocracy and rise through the ranks to join the Blood Lords themselves—the council of powerful undead who rule this necrocratic nation.
+
+**A Rare Opportunity for Non-Good Alignments:** Unlike most campaigns that rely on good-aligned parties, Blood Lords is one of the few adventure paths perfectly suited for neutral and evil characters. While the party should still share common goals and alignment to work together effectively, this campaign offers a refreshing change of pace from traditional heroic narratives. This morally complex campaign explores themes of power, undeath, and ambition in one of Golarion's most fascinating locations.
 
 ## What to Expect
 
@@ -34,11 +41,12 @@ Blood Lords is a unique full-length adventure path set in Geb, a nation ruled by
 ## Perfect For
 
 This campaign is ideal for players who enjoy:
+- Playing non-good aligned characters (neutral or evil)
 - Undead and necromancy themes
 - Morally complex and gray narratives
 - Full 1-20 epic campaigns
 - Political intrigue and social climbing
-- Playing in traditionally "evil" societies
+- A refreshing break from traditional heroic campaigns
 - Exploring unique and dark settings
 - Long-term character development
 
