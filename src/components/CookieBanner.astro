@@ -1,0 +1,131 @@
+---
+import Button from './Button.astro';
+---
+
+<div id="cookie-banner" class="cookie-banner hidden">
+	<div class="cookie-banner-content">
+		<div class="cookie-banner-inner">
+			<div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+				<div class="flex-1">
+					<h3 class="text-lg font-semibold text-stone-900 mb-2">We value your privacy</h3>
+					<p class="text-sm text-stone-600">
+						This website uses Microsoft Clarity to understand how visitors interact with our site through anonymous usage analytics. By accepting, you consent to the collection of this data. We do not collect personally identifiable information or share your data with third parties beyond Microsoft's analytics service. You can decline and still use the website normally.
+					</p>
+				</div>
+				<div class="flex flex-col sm:flex-row gap-3 shrink-0">
+					<button id="cookie-decline" class="inline-flex items-center justify-center font-semibold transition-all duration-250 px-6 py-3 text-base rounded-lg border-2 border-stone-300 text-stone-700 hover:bg-stone-50 whitespace-nowrap">
+						Decline
+					</button>
+					<button id="cookie-accept" class="inline-flex items-center justify-center font-semibold transition-all duration-250 px-6 py-3 text-base rounded-lg bg-gradient-to-r from-[#b93d5e] to-[#9c2d4b] text-white hover:from-[#9c2d4b] hover:to-[#832943] hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap">
+						Accept
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.cookie-banner {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+		padding: 1.5rem;
+		animation: slideUp 0.3s ease-out;
+	}
+
+	.cookie-banner.hidden {
+		display: none;
+	}
+
+	.cookie-banner-content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.cookie-banner-inner {
+		padding: 1.5rem 2rem;
+		background: white;
+		border-radius: 1rem;
+		box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.1), 0 -2px 8px rgba(0, 0, 0, 0.06);
+		border: 1px solid #e7e5e4;
+	}
+
+	@keyframes slideUp {
+		from {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.cookie-banner {
+			padding: 1rem;
+		}
+
+		.cookie-banner-inner {
+			padding: 1.25rem;
+		}
+	}
+</style>
+
+<script>
+	// Check if user has already made a choice
+	const CONSENT_KEY = 'cookie-consent';
+
+	function getCookieConsent() {
+		return localStorage.getItem(CONSENT_KEY);
+	}
+
+	function setCookieConsent(value: 'accepted' | 'declined') {
+		localStorage.setItem(CONSENT_KEY, value);
+		window.dispatchEvent(new CustomEvent('cookieConsentChange', { detail: { consent: value } }));
+	}
+
+	function showBanner() {
+		const banner = document.getElementById('cookie-banner');
+		if (banner) {
+			banner.classList.remove('hidden');
+		}
+	}
+
+	function hideBanner() {
+		const banner = document.getElementById('cookie-banner');
+		if (banner) {
+			banner.classList.add('hidden');
+		}
+	}
+
+	// Show banner if no consent has been given
+	const consent = getCookieConsent();
+	if (!consent) {
+		showBanner();
+	}
+
+	// Handle accept button
+	const acceptBtn = document.getElementById('cookie-accept');
+	acceptBtn?.addEventListener('click', () => {
+		setCookieConsent('accepted');
+		hideBanner();
+		// Reload to activate tracking scripts
+		window.location.reload();
+	});
+
+	// Handle decline button
+	const declineBtn = document.getElementById('cookie-decline');
+	declineBtn?.addEventListener('click', () => {
+		setCookieConsent('declined');
+		hideBanner();
+	});
+
+	// Export function for other scripts to check consent
+	(window as any).hasAnalyticsConsent = function() {
+		return getCookieConsent() === 'accepted';
+	};
+</script>
