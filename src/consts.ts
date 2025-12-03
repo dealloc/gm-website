@@ -27,3 +27,6 @@ export const PRICING = {
 	signupFee: 20,
 	currency: '€',
 };
+
+// Forms
+export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnnevryk';

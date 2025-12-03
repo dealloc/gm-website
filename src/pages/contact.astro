@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
-import {SOCIAL_LINKS} from '../consts';
+import {SOCIAL_LINKS, FORMSPREE_ENDPOINT} from '../consts';
 import {getCollection} from "astro:content";
 
 
@@ -38,7 +38,7 @@ const campaigns = await getCollection('campaigns');
 				<!-- Contact Form -->
 				<div>
 					<h2 class="text-3xl font-display font-semibold mb-6">Send a Message</h2>
-					<form class="space-y-6" method="POST" action="https://formspree.io/f/mnnevryk">
+					<form class="space-y-6" method="POST" action={FORMSPREE_ENDPOINT}>
 						<div>
 							<label for="name" class="block text-sm font-medium text-stone-700 mb-2">
 								Name *
