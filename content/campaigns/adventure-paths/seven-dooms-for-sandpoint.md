@@ -17,6 +17,7 @@ publishDate: 2024-03-08
 trailer: 'aazeY5gHZ74'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/f/f2/Seven_Dooms_for_Sandpoint_softcover.jpg/500px-Seven_Dooms_for_Sandpoint_softcover.jpg.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Seven_Dooms_for_Sandpoint'
+playersGuide: 'https://downloads.paizo.com/SevenDoomsforSandpoint_PlayersGuide.pdf'
 ---
 
 ## Overview

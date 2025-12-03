@@ -17,6 +17,7 @@ publishDate: 2022-07-27
 contentWarnings: ['Torture', 'Undead', 'Death']
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/9/94/Blood_Lords_logo.png/700px-Blood_Lords_logo.png.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Blood_Lords_(adventure_path)'
+playersGuide: "https://downloads.paizo.com/Blood+Lords+Player's+Guide.pdf"
 ---
 
 ## Overview

@@ -17,6 +17,7 @@ publishDate: 2024-10-30
 trailer: 'RxvK65p9nuo'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/3/3a/Triumph_of_the_Tusk_logo.webp/700px-Triumph_of_the_Tusk_logo.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Triumph_of_the_Tusk'
+playersGuide: "https://downloads.paizo.com/TriumphOfTheTusk_PlayersGuide.pdf"
 ---
 
 ## Overview

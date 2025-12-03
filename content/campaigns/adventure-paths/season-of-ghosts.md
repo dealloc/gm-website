@@ -18,6 +18,7 @@ trailer: 'SIffCZu6POg'
 contentWarnings: ['Spiders', 'Body horror', 'Substance abuse / alcohol', 'Young adults in peril', 'Claustrophobia', 'Ghosts', 'death']
 logoUrl: 'https://pathfinderwiki.com/w/images/6/6e/Season_of_Ghosts_logo.png'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Season_of_Ghosts'
+playersGuide: "https://downloads.paizo.com/SeasonofGhosts_PlayersGuide.pdf"
 ---
 
 ## Overview

@@ -18,6 +18,7 @@ trailer: '3ifJ25xt-dE'
 contentWarnings: ['Confinement', 'torture', 'intimate partner violence']
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/2/23/Shades_of_Blood_logo.webp/700px-Shades_of_Blood_logo.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Shades_of_Blood'
+playersGuide: "https://downloads.paizo.com/ShadesOfBlood_PlayersGuide.pdf"
 ---
 
 ## Overview

@@ -17,6 +17,7 @@ publishDate: 2010-03-31
 trailer: 'ClbWYVIBK9A'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/b/ba/Kingmaker_logo.webp/700px-Kingmaker_logo.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Kingmaker_(adventure_path)'
+playersGuide: 'https://downloads.paizo.com/Kingmaker+Players+Guide.pdf'
 ---
 
 ## Overview

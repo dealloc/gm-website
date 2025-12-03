@@ -17,6 +17,7 @@ publishDate: 2024-04-24
 trailer: 'cec4MFw-kOM'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/7/79/Wardens_of_Wildwood_logo.webp/700px-Wardens_of_Wildwood_logo.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Wardens_of_Wildwood'
+playersGuide: "https://downloads.paizo.com/WardensofWildwood_PlayersGuide.pdf"
 ---
 
 ## Overview

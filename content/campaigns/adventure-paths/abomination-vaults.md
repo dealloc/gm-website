@@ -18,6 +18,7 @@ trailer: '9VE7y83tMVQ'
 contentWarnings: ["suicide", "ableism", "body horror", "human experimentation"]
 logoUrl: 'https://pathfinderwiki.com/w/images/7/7c/Abomination_Vaults_logo.png'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Abomination_Vaults_(adventure_path)'
+playersGuide: 'https://downloads.paizo.com/AbominationVaults_PlayersGuide.pdf'
 ---
 
 ## Overview

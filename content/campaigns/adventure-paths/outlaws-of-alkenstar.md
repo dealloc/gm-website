@@ -17,6 +17,7 @@ publishDate: 2022-04-27
 trailer: 'PpOV0VuM3hg'
 logoUrl: 'https://pathfinderwiki.com/w/images/9/92/Outlaws_of_Alkenstar_logo.png'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Outlaws_of_Alkenstar'
+playersGuide: "https://downloads.paizo.com/Outlaws+of+Alkenstar+Player's+Guide.pdf"
 ---
 
 ## Overview

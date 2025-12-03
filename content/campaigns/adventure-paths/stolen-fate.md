@@ -17,6 +17,7 @@ publishDate: 2023-03-26
 trailer: 'bLYhQ8fOLM4'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/6/6d/Stolen_Fate_logo.png/700px-Stolen_Fate_logo.png.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Stolen_Fate'
+playersGuide: "https://downloads.paizo.com/StolenFatePlayersGuide.pdf"
 ---
 
 ## Overview

@@ -47,6 +47,7 @@ const campaigns = defineCollection({
 			// Additional information from the Pathfinder wiki
 			logoUrl: z.string().optional(),
 			wikiEntry: z.string().optional(),
+			playersGuide: z.string().optional(),
         }),
 });
 

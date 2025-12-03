@@ -17,6 +17,7 @@ publishDate: 2025-01-08
 trailer: 'C8T4bMosOVU'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/2/29/Spore_War_logo.png/700px-Spore_War_logo.png.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Spore_War'
+playersGuide: "https://downloads.paizo.com/SporeWar_PlayersGuide.pdf"
 ---
 
 ## Overview

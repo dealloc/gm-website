@@ -17,6 +17,7 @@ publishDate: 2023-01-25
 trailer: '494QBfcDQJY'
 logoUrl: 'https://pathfinderwiki.com/w/images/thumb/7/74/Gatewalkers_logo.png/700px-Gatewalkers_logo.png.webp'
 wikiEntry: 'https://pathfinderwiki.com/wiki/Gatewalkers'
+playersGuide: 'https://downloads.paizo.com/GatewalkersPlayersGuide.pdf'
 ---
 
 ## Overview
