@@ -8,7 +8,7 @@ levelRange:
 parts: 3
 tags: ["Mystery", "Planar", "Amnesia", "Investigation", "Multiverse", "Paranormal"]
 publisher: "Paizo"
-heroImage: "../../../src/assets/gatewalkers.png"
+heroImage: "../../../src/assets/gatewalkers.jpg"
 status: "available"
 sessionDuration: "3-4 hours"
 playersMin: 4
