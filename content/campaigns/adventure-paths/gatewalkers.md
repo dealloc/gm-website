@@ -20,9 +20,22 @@ wikiEntry: 'https://pathfinderwiki.com/wiki/Gatewalkers'
 playersGuide: 'https://downloads.paizo.com/GatewalkersPlayersGuide.pdf'
 ---
 
+<section class="px-2 bg-green-50 rounded-xl border border-green-200">
+	<p>
+		This adventure path is available both in the original 3-parth adventure, as well as the newly released Adventure Path.
+	</p>
+	<p>
+		The story is the exact same, but the newly released version is more polished and modern!
+	</p>
+</section>
+
 ## Overview
 
-Gatewalkers is a mind-bending mystery adventure path that begins with a global amnesic episode—thousands of people, including you, lost time and have no memory of what happened. As paranormal investigators, you'll work to uncover the truth behind this Missing Moment, following clues that lead you across multiple realities and planes of existence. What starts as personal investigation evolves into a multiverse-threatening conspiracy.
+Gatewalkers is a mind-bending mystery adventure path that begins with a global amnesic episode—thousands of people,
+including you, lost time and have no memory of what happened.
+As paranormal investigators, you'll work to uncover the truth behind this Missing Moment,
+following clues that lead you across multiple realities and planes of existence.
+What starts as personal investigation evolves into a multiverse-threatening conspiracy.
 
 ## What to Expect
 
