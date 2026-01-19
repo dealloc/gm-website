@@ -4,7 +4,7 @@ description: 'The fate of two goddesses hangs in the balance as disgraced gravek
 campaignType: 'adventure'
 levelRange:
   min: 1
-  max: 10
+  max: 20
 parts: 3
 tags: []
 publisher: 'Paizo'
